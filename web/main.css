@@ -1,0 +1,34 @@
+body {
+    background: azure;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+h1 {
+    font-size: 22;
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+table, div {
+    background-color: cadetblue;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 4px;
+    width: 1000px;
+}
+
+
+div {
+    width: 450px;
+}
+
+td {
+    padding: 5px;
+}
+
