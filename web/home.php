@@ -7,7 +7,7 @@
 
 <body>
     <header id="top"> 
-    <?php include($_SERVER['DOCUMENT_ROOT']."web/nav.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."nav.php"); ?>
     </header>
     
   <h2>The Puppies Journey </h2> 
