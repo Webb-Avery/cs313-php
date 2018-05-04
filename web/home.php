@@ -7,12 +7,12 @@
 
 <body>
     <header id="top"> 
-        <h1> Welcome to Avery Webb's Home Page</h1>
-        <hr>
+    <?php include($_SERVER['DOCUMENT_ROOT']."web/nav.php"); ?>
     </header>
     
-  <h2>The Puppies Journey</h2>
+  <h2>The Puppies Journey </h2> 
   
+  <p> Hover over pictures to see them grow! </p>
   <p>My family has a wonderful dog named Coco (on Right), she is half toy poodle and half pug. This year our family decided it would be a fun adventure to have puppies! Bennie (on left) is a dog that lives down the street and the dad to our puppies. </p>
   <img id = "puppy" src="pictures/mom_dad.jpg" alt="Mom and Dad dogs">
 
@@ -37,14 +37,7 @@
     <hr>
     <footer>
         
-        <div> 
-            <blockquote cite = "http://www.goodreads.com/quotes/2448-to-live-is-the-" >
-                <span>
-                    “To live is the rarest thing in the world. Most people just exist.”</span>
-                <b>Oscar Wilde</b>
-            </blockquote>
-        </div>
-    
+       
         <p> <a href="assignments.html">Assignments
             </a>  |  <a href = "#top">Top of Page</a></p>
     </footer>

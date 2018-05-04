@@ -45,10 +45,11 @@ td {
     padding: 5px;
 }
 
-blockquote {
-    font-family: Georgia; 
-    text-align: center; 
-    padding-bottom: 10px;
+nav {
+    background: lightgrey;
+    border: 2px outset gold;
+    padding: 3px;
 }
+
 
 
