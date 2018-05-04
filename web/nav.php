@@ -4,7 +4,7 @@
 </header>
 <nav>
     
-    <a href="home.php">Home</a>
-    <a href="hello.html">Hello World</a>
+    <a href="home.php">Home   </a>
+    <a href="assignments.html"> Assignments   </a>
     <a href="">More links to come!</a>
 </nav>

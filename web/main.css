@@ -46,8 +46,8 @@ td {
 }
 
 nav {
-    background: lightgrey;
-    border: 2px outset gold;
+    background: rgb(66, 142, 212);
+    border: 1px outset black;
     padding: 3px;
 }
 

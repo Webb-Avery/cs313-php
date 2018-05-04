@@ -36,10 +36,7 @@
 
     <hr>
     <footer>
-        
-       
-        <p> <a href="assignments.html">Assignments
-            </a>  |  <a href = "#top">Top of Page</a></p>
+        <a href = "#top">Top of Page</a></p>
     </footer>
 </body>
 </html>
