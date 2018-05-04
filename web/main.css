@@ -23,6 +23,10 @@ table, div {
     width: 1000px;
 }
 
+img {
+    align-content: center;
+
+}
 
 div {
     width: 450px;
