@@ -11,8 +11,19 @@
         <hr>
     </header>
     
-  <h2>COCO BEAN</h2>
+  <h2>The Puppies Journey</h2>
+  
+  <p>My family has a wonderful dog named Coco (on Right), she is half toy poodle and half pug. This year our family decided it would be a fun adventure to have puppies! Bennie (on left) is a dog that lives down the street and the dad to our puppies. </p>
   <img src="pictures/mom_dad.jpg" alt="Mom and Dad dogs">
+  <img src="pictures/pregnant_coco.jpg" alt="puppies">
+  <img src="pictures/tiny_puppies.jpg" alt="puppies">
+  <img src="pictures/tiny_puppy.jpg" alt="puppies">
+  <img src="pictures/tiniest.jpg" alt="puppies">
+  <img src="pictures/puppy.jpg" alt="puppies">
+  <img src="pictures/food_dish.jpg" alt="puppies">
+  <img src="pictures/first_toy.jpg" alt="puppies">
+
+
     <hr>
     <footer>
         
