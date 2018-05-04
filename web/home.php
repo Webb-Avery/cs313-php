@@ -11,20 +11,20 @@
         <hr>
     </header>
     
-  
+  <h2>COCO BEAN</h2>
+  <img src="pictures/mom_dad.jpg" alt="Mom and Dad dogs">
     <hr>
     <footer>
         
         <div> 
-            <blockquote cite = "http://www.goodreads.com/quotes/2448-to-live-is-the-" style= 
-                        "font-family: Georgia; text-align: center; padding-bottom: 10px;">
-                <span style = "font-family: cursive; font-size: 20px; color: #E92594">
+            <blockquote cite = "http://www.goodreads.com/quotes/2448-to-live-is-the-" >
+                <span>
                     “To live is the rarest thing in the world. Most people just exist.”</span>
                 <b>Oscar Wilde</b>
             </blockquote>
         </div>
     
-        <p style= "text-align: center; font-family: cursive"> <a href="index.html">Assignments
+        <p> <a href="assignments.html">Assignments
             </a>  |  <a href = "#top">Top of Page</a></p>
     </footer>
 </body>
