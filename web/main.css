@@ -23,15 +23,16 @@ table, div {
     width: 1000px;
 }
 
-img {
+#puppy {
     align-content: center;
     transition: transform 2s linear;
 
 }
 
-img:hover {
+#puppy:hover {
     transform :scale(2);
 }
+
 
 div {
     width: 450px;
