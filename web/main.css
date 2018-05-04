@@ -36,7 +36,7 @@ table, div {
 }
 
 p {
-    padding: 10%;
+    padding-left: 10%;
 }
 
 div {
@@ -48,7 +48,7 @@ td {
 }
 
 nav {
-    padding: 30px;
+    padding: 10px;
     font-size: 20;
     text-align: center;
 }
