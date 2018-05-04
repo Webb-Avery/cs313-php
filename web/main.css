@@ -53,5 +53,9 @@ nav {
     text-align: center;
 }
 
+li {
+    display: inline;
+    margin-right: 50px;
+}
 
 

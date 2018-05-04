@@ -35,8 +35,5 @@
 
 
     <hr>
-    <footer>
-        <a href = "#top">Top of Page</a></p>
-    </footer>
 </body>
 </html>
