@@ -25,7 +25,12 @@ table, div {
 
 img {
     align-content: center;
+    transition: transform 2s linear;
 
+}
+
+img:hover {
+    transform :scale(2);
 }
 
 div {
@@ -41,3 +46,5 @@ blockquote {
     text-align: center; 
     padding-bottom: 10px;
 }
+
+
