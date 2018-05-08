@@ -13,13 +13,22 @@
 
             <p>Major:</p>
             <ul> 
-                <li>CS <input type="radio" name="major"></li>
-                <li>WDD<input type="radio" name="major"></li>
-                <li>CIT<input type="radio" name="major"></li>
-                <li>CE<input type="radio" name="major"></li>
+                <li>CS <input type="radio" name="major" value="CS"></li>
+                <li>WDD<input type="radio" name="major" value="WDD"></li>
+                <li>CIT<input type="radio" name="major" value="CIT"></li>
+                <li>CE<input type="radio" name="major" value="CE"></li>
             </ul>
 
             <p>Comment: <textarea name="comments" ></textarea></p>
+            <ul>
+                <li><input type="checkbox" value="North America" name="continents[]"></li>
+                <li><input type="checkbox" value="South America" name="continents[]"></li>
+                <li><input type="checkbox" value="Europe" name="continents[]"></li>
+                <li><input type="checkbox" value="Asia" name="continents[]"></li>
+                <li><input type="checkbox" value="Australia" name="continents[]"></li>
+                <li><input type="checkbox" value="Africa" name="continents[]"></li>
+                <li><input type="checkbox" value="Antarctica" name="continents[]"></li>
+            </ul>
 
             <input type="submit">
         </form>
