@@ -21,6 +21,7 @@
 
             <p>Comment: <textarea name="comments" ></textarea></p>
 
+            <input type="submit">
         </form>
     </body>
 </html>
