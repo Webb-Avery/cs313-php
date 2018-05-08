@@ -28,13 +28,13 @@ $majors = ["CS", "WDD", "CIT", "CE"];
 
             <p>Comment: <textarea name="comments" ></textarea></p>
             <ul>
-                <li>North America<input type="checkbox" value="North America" name="continents[]"></li>
-                <li>South America<input type="checkbox" value="South America" name="continents[]"></li>
-                <li>Europe<input type="checkbox" value="Europe" name="continents[]"></li>
-                <li>Asia<input type="checkbox" value="Asia" name="continents[]"></li>
-                <li>Australia<input type="checkbox" value="Australia" name="continents[]"></li>
-                <li>Africa<input type="checkbox" value="Africa" name="continents[]"></li>
-                <li>Antarctica<input type="checkbox" value="Antarctica" name="continents[]"></li>
+                <li>North America<input type="checkbox" value="na" name="continents[]"></li>
+                <li>South America<input type="checkbox" value="sa" name="continents[]"></li>
+                <li>Europe<input type="checkbox" value="eu" name="continents[]"></li>
+                <li>Asia<input type="checkbox" value="as" name="continents[]"></li>
+                <li>Australia<input type="checkbox" value="au" name="continents[]"></li>
+                <li>Africa<input type="checkbox" value="af" name="continents[]"></li>
+                <li>Antarctica<input type="checkbox" value="an" name="continents[]"></li>
             </ul>
 
             <input type="submit">
