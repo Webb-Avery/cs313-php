@@ -1,0 +1,22 @@
+body {
+    background-color: #00BF32;
+}
+
+h1 {
+    color: white;
+}
+
+nav {
+    background: lightgrey;
+    border: 2px outset gold;
+    padding: 3px;
+}
+
+#container {
+    background-color: #DEB887;
+    padding: 10px;
+}
+
+.current {
+    background-color: white;
+}
