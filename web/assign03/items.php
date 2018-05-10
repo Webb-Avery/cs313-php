@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,5 +13,10 @@
     <?php include 'nav.php'; ?>
     </header>
     
+    <h1>Berries for sale!</h1>
+    <ul>
+        <li>Strawberries</li>
+        <li>Blueberries</li>
+    </ul> 
     </body>
 </html>
