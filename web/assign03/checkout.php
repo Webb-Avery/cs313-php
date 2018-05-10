@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="stylesheet" href="main.css">
-    <title>Items for sale</title>
+     <link rel="stylesheet" href="assign03.css">
+    <title>Checkout </title>
 </head>
 
 <body>
