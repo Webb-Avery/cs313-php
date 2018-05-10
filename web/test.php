@@ -15,5 +15,6 @@
         {
             echo "<div id = 'div$x'> </div>";
         }
-    </body>
+
+    </head>
 </html>
