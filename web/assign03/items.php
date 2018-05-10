@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+
+$_SEESION["cart"] = array();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,5 +1,14 @@
 <?php
 session_start();
+if(isset($_SESSION["counter"]))
+{
+$_SESSION["counter"]++;
+}
+else 
+{
+$_SESSION["counter"] = 1;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +21,10 @@ session_start();
     <header id="top"> 
     <?php include 'nav.php'; ?>
     </header>
-    
+        <p>You have visted this page 
+            <?php 
+            echo $_SESSION["counter"];
+            ?>
+            times<p> 
     </body>
 </html>
