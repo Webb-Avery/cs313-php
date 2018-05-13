@@ -14,12 +14,15 @@ session_start();
     <?php include 'nav.php'; ?>
     </header>
     <h2>Shopping Cart</h2>
+    <ul> 
+    <?php
     $index = 0;
-    <ul>
+    
     foreach ($_SESSION['cart'] as $item) {
         echo "<li id='$index'><button onclick='removeFromCart($index, " . $_SESSION['price'][$index] . ")'>Remove from Cart</button>$item</li>";
         $index++;
     }
+    ?>
     <ul>
 
  <?php
