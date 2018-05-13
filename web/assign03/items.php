@@ -2,14 +2,21 @@
 session_start();
 
 
-$_SEESION["cart"] = array();
+$_SESSION["cart"] = array();
 
+
+array_push($_SESSION["cart"], "item");
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
      <link rel="stylesheet" href="assign03.css">
+     <script>
+         function addToCart() {
+            
+         }
+     </script>
     <title>Items for sale</title>
 </head>
 
@@ -20,8 +27,8 @@ $_SEESION["cart"] = array();
     
     <h1>Berries for sale!</h1>
     <ul>
-        <li>Strawberries</li>
-        <li>Blueberries</li>
+        <li><button onclick="addToCart()">Add to Cart</button> Strawberries</li>
+        <li><button onclick="addToCart()">Add to Cart</button>Blueberries</li>
     </ul> 
     </body>
 </html>
