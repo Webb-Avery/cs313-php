@@ -13,8 +13,10 @@ array_push($_SESSION["cart"], "item");
 <head>
      <link rel="stylesheet" href="assign03.css">
      <script>
-         function addToCart() {
-            
+         function addToCart(item, price) {
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.open("GET", "cart.php?action=add&item=" + item + "&price=" + price, true);
+            httpRequest.send();
          }
      </script>
     <title>Items for sale</title>
@@ -27,8 +29,8 @@ array_push($_SESSION["cart"], "item");
     
     <h1>Berries for sale!</h1>
     <ul>
-        <li><button onclick="addToCart()">Add to Cart</button> Strawberries</li>
-        <li><button onclick="addToCart()">Add to Cart</button>Blueberries</li>
+        <li><button onclick="addToCart('Strawberries', 5)">Add to Cart</button> Strawberries, $5</li>
+        <li><button onclick="addToCart('blueberries', 4)">Add to Cart</button>Blueberries, $4</li>
     </ul> 
     </body>
 </html>
