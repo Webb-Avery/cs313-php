@@ -29,7 +29,7 @@ array_push($_SESSION["cart"], "item");
     
     <h1>Berries for sale!</h1>
     <ul>
-        <li><button onclick="addToCart('Strawberries', 5)">Add to Cart</button> Strawberries, $5</li>
+        <li><button onclick="addToCart('Strawberries', 5)">Add to Cart</button> Strawberries, $5.00</li>
         <li><button onclick="addToCart('blueberries', 4)">Add to Cart</button>Blueberries, $4</li>
     </ul> 
     </body>
