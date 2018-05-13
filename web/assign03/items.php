@@ -1,11 +1,11 @@
 <?php
 session_start();
 
+if(!isset($_SESSION['cart']])){
+    $_SESSION["cart"] = array();
+    $_SESSION["price"] = array();
+}
 
-$_SESSION["cart"] = array();
-
-
-array_push($_SESSION["cart"], "item");
 
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ array_push($_SESSION["cart"], "item");
      <script>
          function addToCart(item, price) {
             var httpRequest = new XMLHttpRequest();
-            httpRequest.open("GET", "cart.php?action=add&item=" + item + "&price=" + price, true);
+            httpRequest.open("GET", "cartEdit.php?action=add&item=" + item + "&price=" + price, true);
             httpRequest.send();
          }
      </script>
