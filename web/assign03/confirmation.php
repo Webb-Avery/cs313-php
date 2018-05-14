@@ -2,13 +2,13 @@
 session_start();
 
 $checkout = htmlspecialchars($_POST['checkout']);
-?>
+
 
 $street = htmlspecialchars($_POST['street']);
 $city = htmlspecialchars($_POST['city']); 
 $state = htmlspecialchars($_POST['state']);
 $zip = htmlspecialchars($_POST['zip']);
-
+?>
 
 <!DOCTYPE html>
 <html lang="en">
