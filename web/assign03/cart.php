@@ -11,9 +11,11 @@ session_start();
         function removeFromCart(index, price) {
             document.getElementById(index).style.display = 'none';
             var total = document.getElementById("total").innerText;
+
             total -= price;
+            if(!is_nan(total)){
             document.getElementById("total").innerHTML = total;
-    
+            }
             var httpRequest = new XMLHttpRequest();
             httpRequest.open("GET", "cart.php?action=remove&item=" + index, true);
             httpRequest.send();
