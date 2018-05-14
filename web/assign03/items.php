@@ -30,6 +30,7 @@ if(!isset($_SESSION['cart'])){
     <h1>Berries for sale!</h1>
     <ul>
         <li><button type='button' class='button' onclick="addToCart('Strawberries', 5)">Add to Cart</button> Strawberries, $5</li>
+        <br>
         <li><button type='button' class='button' onclick="addToCart('blueberries', 4)">Add to Cart</button>Blueberries, $4</li>
     </ul> 
     </body>
