@@ -19,7 +19,7 @@ session_start();
     $index = 0;
     
     foreach ($_SESSION['cart'] as $item) {
-        echo "<li id='$index'><button type='button' class='button' onclick='removeFromCart($index, " . $_SESSION['price'][$index] . ")'>Remove from Cart</button>$item</li>";
+        echo "<li id='$index'><button type='button' class='button' onclick='removeFromCart($index, " . $_SESSION['price'][$index] . ")'>Remove from Cart</button>$item</li><br>";
         $index++;
     }
     ?>

@@ -72,3 +72,15 @@ li {
     border-radius: 18px;
 }
 
+.checkout{
+    background-color: darkred;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin: 4px 2px;
+    border-radius: 18px;
+}
