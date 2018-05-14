@@ -5,6 +5,7 @@ $checkout = htmlspecialchars($_POST['checkout']);
 
 
 $street = htmlspecialchars($_POST['street']);
+echo $street;
 $city = htmlspecialchars($_POST['city']); 
 $state = htmlspecialchars($_POST['state']);
 $zip = htmlspecialchars($_POST['zip']);
