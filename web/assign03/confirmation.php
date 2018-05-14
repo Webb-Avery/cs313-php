@@ -29,7 +29,7 @@ $zip = htmlspecialchars($_POST['zip']);
         foreach ($_SESSION['cart'] as $item) {
             echo "<li>$item</li>";
         }
-
+        ?>
         </ul>
         <p>We are shipping your purchase to 
         <?php 
