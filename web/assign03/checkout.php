@@ -22,6 +22,7 @@ session_start();
        <p>State:      <input type="text" class="input" name="state"><br></p>
        <p>Zip Code:   <input type="text" class="input" name="zip"><br></p>
 
+<a href='cart.php' class="checkout" >Return to Cart </a>
      <input type='submit' value='Purchase Items' class='checkout'>
      </form>
     </body>

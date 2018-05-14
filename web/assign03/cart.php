@@ -6,6 +6,19 @@ session_start();
 <html lang="en">
 <head>
      <link rel="stylesheet" href="assign03.css">
+
+     <script>
+        function removeFromCart(index, price) {
+            document.getElementById(index).style.display = 'none';
+            var total = document.getElementById("total").innerText;
+            total -= price;
+            document.getElementById("total").innerHTML = total;
+    
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.open("GET", "cart.php?action=remove&item=" + index, true);
+            httpRequest.send();
+    }
+    </script>
     <title>Shopping Cart</title>
 </head>
 
@@ -30,7 +43,7 @@ session_start();
     foreach ($_SESSION['price'] as $price) {
         $total += $price;
     }
-    echo "</p>Total:  $" . $total ;
+    echo "<p id='total'>Total:  $" . $total </p>;
     ?>
 
  <a href='checkout.php' class="checkout" >Checkout Items </a>
