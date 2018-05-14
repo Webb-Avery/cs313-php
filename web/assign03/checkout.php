@@ -1,13 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION["counter"]))
-{
-$_SESSION["counter"]++;
-}
-else 
-{
-$_SESSION["counter"] = 1;
-}
+
 
 ?>
 <!DOCTYPE html>
@@ -21,10 +14,12 @@ $_SESSION["counter"] = 1;
     <header id="top"> 
     <?php include 'nav.php'; ?>
     </header>
-        <p>You have visted this page 
-            <?php 
-            echo $_SESSION["counter"];
-            ?>
-            times<p> 
+       <h2>Shipping Address</h2>
+
+       Street:     <input type="text" class="input" id="street">
+       City:       <input type="text" class="input" id="street">
+       State:      <input type="text" class="input" id="street">
+       Zip Code:   <input type="text" class="input" id="street">
+
     </body>
 </html>

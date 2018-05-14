@@ -34,6 +34,6 @@ if(!isset($_SESSION['cart'])){
         <li><button type='button' class='button' onclick="addToCart('blueberries', 4)">Add to Cart</button>  Blueberries, $4</li>
     </ul> 
 
-    <a href="cart.php" class='checkout' >Checkout</a>
+    <a href="cart.php" class='checkout' >View Cart</a>
     </body>
 </html>

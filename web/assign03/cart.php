@@ -33,6 +33,6 @@ session_start();
     echo "</p>Total:  $" . $total ;
     ?>
 
- <a href='checkout.php'>Checkout</a>
+ <a href='checkout.php' class="checkout" >Checkout</a>
     </body>
 </html>
