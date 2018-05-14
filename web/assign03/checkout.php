@@ -17,10 +17,10 @@ session_start();
        <h2>Shipping Address</h2>
 
         <form method="post" action="confirmation.php">
-       <p>Street:     <input type="text" class="input" id="street"><br></p>
-       <p>City:       <input type="text" class="input" id="city"><br></p>
-       <p>State:      <input type="text" class="input" id="state"><br></p>
-       <p>Zip Code:   <input type="text" class="input" id="zip"><br></p>
+       <p>Street:     <input type="text" class="input" name="street"><br></p>
+       <p>City:       <input type="text" class="input" name="city"><br></p>
+       <p>State:      <input type="text" class="input" name="state"><br></p>
+       <p>Zip Code:   <input type="text" class="input" name="zip"><br></p>
 
      <input type='submit' value='Purchase Items' class='checkout'>
      </form>
