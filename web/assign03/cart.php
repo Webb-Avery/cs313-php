@@ -43,9 +43,9 @@ session_start();
     foreach ($_SESSION['price'] as $price) {
         $total += $price;
     }
-    echo "<p id='total'>Total:  $" . $total </p>;
+    echo "<p id='total'>Total:  $" . $total;
     ?>
-
+</p>
  <a href='checkout.php' class="checkout" >Checkout Items </a>
     </body>
 </html>
