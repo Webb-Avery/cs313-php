@@ -5,7 +5,6 @@ $checkout = htmlspecialchars($_POST['checkout']);
 
 
 $street = htmlspecialchars($_POST['street']);
-echo $street;
 $city = htmlspecialchars($_POST['city']); 
 $state = htmlspecialchars($_POST['state']);
 $zip = htmlspecialchars($_POST['zip']);
@@ -28,13 +27,13 @@ $zip = htmlspecialchars($_POST['zip']);
         <ul>
         <?php
         foreach ($_SESSION['cart'] as $item) {
-            echo "<li>$item</li>";
+            echo "<li>$item</li><br>";
         }
         ?>
         </ul>
         <p>We are shipping your purchase to 
         <?php 
-        echo $street . "," . $city . "," . $state . "," . $zip;
+        echo $street . "  " . $city . "," . $state . "  " . $zip;
         ?>
         </p>
 
