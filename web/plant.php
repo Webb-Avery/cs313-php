@@ -38,7 +38,7 @@ catch (PDOException $ex)
         <th> Plant Type </th>
     </tr>
 <?php
-foreach ($db->query('SELECT name, sunExposure, waterInches, timeToPlant, height, spread, lifeCycle, plantType FROM plants') as $plant)
+foreach ($db->query('SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants') as $plant)
 {
 
     $name = $plant["name"];
