@@ -49,4 +49,4 @@ plantsId INT REFERENCES plants(id) NOT NULL
 
 
 
-INSERT INTO plants(name, sunExposure, waterInches, timeToPlant, height, spread, lifeCycle, plantType)  VALUES ('Sweet Basil', 'Full Sun', '1 inch', 'spring,summer', '12-18 inches', '10-14 inches', 'Annual', 'Herb');
+INSERT INTO plants(name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype)  VALUES ('Sweet Basil', 'Full Sun', '1 inch', 'spring,summer', '12-18 inches', '10-14 inches', 'Annual', 'Herb');
