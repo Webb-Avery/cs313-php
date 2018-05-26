@@ -42,13 +42,13 @@ foreach ($db->query('SELECT name, sunexposure, waterinches, timetoplant, height,
 {
 
     $name = $plant["name"];
-    $sun = $plant["sunExposure"];
-    $water = $plant["waterInches"];
-    $timeToPlant = $plant["timeToPlant"];
+    $sun = $plant["sunexposure"];
+    $water = $plant["waterinches"];
+    $timeToPlant = $plant["timetoplant"];
     $spread = $plant["spread"];
     $height = $plant["height"];
-    $lifeCycle = $plant["lifeCycle"];
-    $type = $plant["plantType"];
+    $lifeCycle = $plant["lifecycle"];
+    $type = $plant["planttype"];
     echo"<tr>";
     echo "<td>$name</td>";
     echo "<td>$sun</td>";
