@@ -24,19 +24,44 @@ catch (PDOException $ex)
 <head>
 </head>
 <body>
-    <h1>Movies</h1>
+    <h1>Plants</h1>
 
-    <ul>
+    <table style="width:100%">
+    <tr>
+        <th>NAME </th>
+        <th>Sun exposure </th>
+        <th>Water needed per week in inches </th>
+        <th>When to plant </th>
+        <th>Plant Spread </th>
+        <th>Plant height </th>
+        <th>Life Cycle </th>
+        <th> Plant Type </th>
+    </tr>
 <?php
-foreach ($db->query('SELECT name, height FROM plants') as $row)
+foreach ($db->query('SELECT name, sunExposure, waterInches, timeToPlant, height, spread, lifeCycle, plantType FROM plants') as $plant)
 {
 
-    $name = $row["name"];
-    $height = $row["height"];
-
-  echo "<li>$name, $height </li>";
+    $name = $plant["name"];
+    $sun = $plant["sunExposure"];
+    $water = $plant["waterInches"];
+    $timeToPlant = $plant["timeToPlant"];
+    $spread = $plant["spread"];
+    $height = $plant["height"];
+    $lifeCycle = $plant["lifeCycle"];
+    $type = $plant["plantType"];
+    echo"<tr>";
+    echo "<td>$name</td>";
+    echo "<td>$sun</td>";
+    echo "<td>$water</td>";
+    echo "<td>$timeToPlant</td>";
+    echo "<td>$spread</td>";
+    echo "<td>$height</td>";
+    echo "<td>$lifeCycle</td>";
+    echo "<td>$type</td>";
+    echo "</tr>";
 }
 ?>
+</table>
     </ul>
 
 </body>
