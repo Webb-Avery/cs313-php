@@ -22,9 +22,18 @@ catch (PDOException $ex)
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="main.css">
+    <title>Plants</title>
 </head>
+
 <body>
+    <header id="top"> 
+    <?php include 'nav.php'; ?>
+    </header>
+
     <h1>Plants</h1>
+
+
 
     <table style="width:100%">
     <tr>
@@ -38,7 +47,12 @@ catch (PDOException $ex)
         <th> Plant Type </th>
     </tr>
 <?php
-foreach ($db->query('SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants') as $plant)
+
+$sun = $_GET["sun"];
+if ($sun == "sun")
+    $sun = "Full Sun";
+
+foreach ($db->query('SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants WHERE sunexposure = $sun') as $plant)
 {
 
     $name = $plant["name"];
@@ -62,7 +76,6 @@ foreach ($db->query('SELECT name, sunexposure, waterinches, timetoplant, height,
 }
 ?>
 </table>
-    </ul>
 
 </body>
 </html>
