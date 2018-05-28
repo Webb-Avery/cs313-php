@@ -34,7 +34,7 @@ catch (PDOException $ex)
     <h1>Plants</h1>
     <?php
 
-    echo "<h1>Plants meeting each search requirement </h1>";
+    echo "<h1>Plants meeting every search requirement </h1>";
     
     echo "<table style='width:100%'><tr>
         <th>NAME </th>
@@ -117,7 +117,6 @@ catch (PDOException $ex)
         }
     }
 
-    echo "<h1>$query</h1>";
     $statement = $db->prepare($query);
     if ($sun != 'none')
     { 
