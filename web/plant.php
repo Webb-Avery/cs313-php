@@ -108,7 +108,7 @@ if($water != 'none')
     if($water == '1')
     {
         echo "<h1>Plants needing 1 inch of water: </h1>";
-        $water = '1 inch OR waterinches = \'1-2inches\'';
+        $water = '1 inch';
 
     }
     else if($water == '2')
