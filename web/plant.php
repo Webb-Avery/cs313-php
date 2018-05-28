@@ -49,7 +49,8 @@ catch (PDOException $ex)
 <?php
 
 $sun = $_GET["sun"];
-$sun = 'Full Sun';
+
+
 $query = "SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants WHERE sunexposure = :sun";
 $statement = $db->prepare($query);
 $statement->bindValue(":sun", $sun, PDO::PARAM_STR);
