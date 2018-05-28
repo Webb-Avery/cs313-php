@@ -62,37 +62,37 @@ catch (PDOException $ex)
         {
            $sun = 'Full Shade';
         }
-        $query = $query . "WHERE sunexposure = :sun";
+        $query .= "WHERE sunexposure = :sun";
     }
 
     
-$water = $_GET["water"];
-$waterExtra = $water;
-if($water != 'none')
-{
-    if($water == '1')
+    $water = $_GET["water"];    
+    $waterExtra = $water;
+    if($water != 'none')
     {
-        $water = '1 inch';
-        $waterExtra = '1-2 inches';
-    }
-    else if($water == '2')
-    {
-        $water = '2 inches';
-        $waterExtra = '1-2 inches';
-    }
-    else if($water == '3')
-    {
-        $water = '3 inches';
-
-    }
-    if ($sun == "none")
-    {
-        $query = $query . "WHERE waterinches = :water OR waterinches = :waterExtra";
-    }
-    else {
-        $query = $query . "AND waterinches = :water OR waterinches = :waterExtra";
-    }
-}
+        if($water == '1')
+        {
+            $water = '1 inch';
+            $waterExtra = '1-2 inches';
+        }
+        else if($water == '2')
+        {
+            $water = '2 inches';
+            $waterExtra = '1-2 inches';
+        }
+        else if($water == '3')
+        {
+            $water = '3 inches';
+        }
+    
+        if ($sun == "none")
+        {
+            $query .= "WHERE waterinches = :water OR waterinches = :waterExtra";
+        }
+        else {
+            $query .= "'AND' waterinches = :water OR waterinches = :waterExtra";
+        }
+    }   
 
     $statement = $db->prepare($query);
     if ($sun != 'none')
