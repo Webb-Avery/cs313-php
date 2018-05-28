@@ -92,7 +92,31 @@ catch (PDOException $ex)
         else {
             $query .= " AND waterinches = :water OR waterinches = :waterExtra";
         }
-    }   
+    } 
+    
+    $life = $_GET["life"];
+    if($life != 'none')
+    {
+        if($life == 'annual')
+        {
+            $life = "Annual";
+        }
+        else if($life == 'perennial')
+        {
+            $life = 'Perennial';
+        
+        }
+
+        
+        if ($sun == "none" && $water == "none")
+        {
+            $query .= " WHERE lifecycle = :life";
+        }
+        else {
+            $query .= " AND lifecycle = :life";
+        }
+    }
+
     echo "<h1>$query</h1>";
     $statement = $db->prepare($query);
     if ($sun != 'none')
@@ -103,6 +127,10 @@ catch (PDOException $ex)
     {
         $statement->bindValue(":water", $water, PDO::PARAM_STR);
         $statement->bindValue(":waterExtra", $waterExtra, PDO::PARAM_STR);
+    }
+    if ($life != 'none')
+    {
+    $statement->bindValue(":life", $life, PDO::PARAM_STR);
     }
     $statement->execute();
 
