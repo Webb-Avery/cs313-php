@@ -182,7 +182,7 @@ if($life != 'none')
         $life = "annual";
 
     }
-    else if($life == 'Perennial')
+    else if($life == 'perennial')
     {
         echo "<h1>Perennial Plants: </h1>";
         $life = 'perennial';
