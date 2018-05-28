@@ -179,13 +179,13 @@ if($life != 'none')
     if($life == 'annual')
     {
         echo "<h1>Annual Plants: </h1>";
-        $life = "annual";
+        $life = "Annual";
 
     }
     else if($life == 'perennial')
     {
         echo "<h1>Perennial Plants: </h1>";
-        $life = 'perennial';
+        $life = 'Perennial';
 
     }
     else 
