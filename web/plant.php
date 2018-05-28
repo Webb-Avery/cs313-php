@@ -33,9 +33,76 @@ catch (PDOException $ex)
 
     <h1>Plants</h1>
 
+<?php
+$sun = $_GET["sun"];
+echo "<h1> $sun </h1>";
+if($sun != 'none')
+{
+    if($sun == 'fullsun')
+    {
+        echo "<h1> FULL SUN </h1>";
+        $sun = 'Full Sun';
 
+    }
+    else if($sun == 'partsun')
+    {
+        echo "<h1> Part SUN </h1>";
+        $sun = 'Part Sun';
 
-    <table style="width:100%">
+    }
+    else if($sun == 'fullshade')
+    {
+        echo "<h1> FULL SHADE </h1>";
+        $sun = 'Full Shade';
+
+    }
+    else 
+    {
+        echo "<h1> Error </h1>";
+    }
+
+    echo "<table style='width:100%'><tr>
+        <th>NAME </th>
+        <th>Sun exposure </th>
+        <th>Water needed per week in inches </th>
+        <th>When to plant </th>
+        <th>Plant Spread </th><th>Plant height </th>
+        <th>Life Cycle </th>
+        <th> Plant Type </th></tr>";
+
+    $query = "SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants WHERE sunexposure = :sun";
+    $statement = $db->prepare($query);
+    $statement->bindValue(":sun", $sun, PDO::PARAM_STR);
+    $statement->execute();
+
+    foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $plant)
+    {
+
+        $name = $plant["name"];
+        $sun = $plant["sunexposure"];
+        $water = $plant["waterinches"];
+        $timeToPlant = $plant["timetoplant"];
+        $spread = $plant["spread"];
+        $height = $plant["height"];
+        $lifeCycle = $plant["lifecycle"];
+        $type = $plant["planttype"];
+        echo"<tr>";
+        echo "<td>$name</td>";
+        echo "<td>$sun</td>";
+        echo "<td>$water</td>";
+        echo "<td>$timeToPlant</td>";
+        echo "<td>$spread</td>";
+        echo "<td>$height</td>";
+        echo "<td>$lifeCycle</td>";
+        echo "<td>$type</td>";
+        echo "</tr>";
+    }
+}
+?>
+</table>
+
+<h1> The Entire Database, for testing </h1>
+<table>
     <tr>
         <th>NAME </th>
         <th>Sun exposure </th>
@@ -46,44 +113,6 @@ catch (PDOException $ex)
         <th>Life Cycle </th>
         <th> Plant Type </th>
     </tr>
-<?php
-
-$sun = $_GET["sun"];
-
-
-$query = "SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants WHERE sunexposure = :sun";
-$statement = $db->prepare($query);
-$statement->bindValue(":sun", $sun, PDO::PARAM_STR);
-$statement->execute();
-
-foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $plant)
-{
-
-    $name = $plant["name"];
-    $sun = $plant["sunexposure"];
-    $water = $plant["waterinches"];
-    $timeToPlant = $plant["timetoplant"];
-    $spread = $plant["spread"];
-    $height = $plant["height"];
-    $lifeCycle = $plant["lifecycle"];
-    $type = $plant["planttype"];
-    echo"<tr>";
-    echo "<td>$name</td>";
-    echo "<td>$sun</td>";
-    echo "<td>$water</td>";
-    echo "<td>$timeToPlant</td>";
-    echo "<td>$spread</td>";
-    echo "<td>$height</td>";
-    echo "<td>$lifeCycle</td>";
-    echo "<td>$type</td>";
-    echo "</tr>";
-}
-?>
-</table>
-
-<h1> The Entire Database, for testing </h1>
-<table>
-    
     <?php
 foreach ($db->query('SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants') as $plant)
 {
@@ -108,7 +137,6 @@ foreach ($db->query('SELECT name, sunexposure, waterinches, timetoplant, height,
     echo "</tr>";
 }
 ?>
-    ?>
 </table>
 </body>
 </html>
