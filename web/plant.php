@@ -131,7 +131,8 @@ catch (PDOException $ex)
 
 ?>
 
-
+</table>
+<table>
 
 
 
