@@ -24,7 +24,6 @@
             Water needed <select name="water">
                 <option value="1">1 inch per week </option>
                 <option value="2">2 inches per week</option>
-                <option value="3">3 inches per week</option>
                 <option value="none">No Preference</option>
             </select>
             <br>

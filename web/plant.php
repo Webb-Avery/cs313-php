@@ -80,10 +80,6 @@ catch (PDOException $ex)
             $water = '2 inches';
             $waterExtra = '1-2 inches';
         }
-        else if($water == '3')
-        {
-            $water = '3 inches';
-        }
     
         if ($sun == "none")
         {
@@ -248,12 +244,6 @@ if($water != 'none')
         echo "<h1>Plants needing 2 inches of water: </h1>";
         $water = '2 inches';
         $waterExtra = '1-2 inches';
-    }
-    else if($water == '3')
-    {
-        echo "<h1>Plants needing 3 inches of water: </h1>";
-        $water = '3 inches';
-
     }
     else 
     {
