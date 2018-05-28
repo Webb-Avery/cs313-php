@@ -90,7 +90,7 @@ catch (PDOException $ex)
             $query .= " WHERE waterinches = :water OR waterinches = :waterExtra";
         }
         else {
-            $query .= " WHERE waterinches = :water OR waterinches = :waterExtra";
+            $query .= " AND waterinches = :water OR waterinches = :waterExtra";
         }
     }   
     echo "<h1>$query</h1>";
@@ -132,7 +132,6 @@ catch (PDOException $ex)
 ?>
 
 </table>
-<table>
 
 
 
