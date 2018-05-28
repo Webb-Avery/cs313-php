@@ -49,9 +49,9 @@ catch (PDOException $ex)
 <?php
 
 $sun = $_GET["sun"];
-$sun = 'Full sun';
+$sun = 'Full Sun';
 
-foreach ($db->query("SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants WHERE sunexposure = 'Full Sun' ") as $plant)
+foreach ($db->query("SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants WHERE sunexposure = $sun ") as $plant)
 {
 
     $name = $plant["name"];
