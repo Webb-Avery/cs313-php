@@ -81,5 +81,34 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $plant)
 ?>
 </table>
 
+<h1> The Entire Database, for testing </h1>
+<table>
+    
+    <?php
+foreach ($db->query('SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants') as $plant)
+{
+
+    $name = $plant["name"];
+    $sun = $plant["sunexposure"];
+    $water = $plant["waterinches"];
+    $timeToPlant = $plant["timetoplant"];
+    $spread = $plant["spread"];
+    $height = $plant["height"];
+    $lifeCycle = $plant["lifecycle"];
+    $type = $plant["planttype"];
+    echo"<tr>";
+    echo "<td>$name</td>";
+    echo "<td>$sun</td>";
+    echo "<td>$water</td>";
+    echo "<td>$timeToPlant</td>";
+    echo "<td>$spread</td>";
+    echo "<td>$height</td>";
+    echo "<td>$lifeCycle</td>";
+    echo "<td>$type</td>";
+    echo "</tr>";
+}
+?>
+    ?>
+</table>
 </body>
 </html>

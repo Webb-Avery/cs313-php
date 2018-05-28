@@ -18,17 +18,20 @@
                 <option value="FullSun">Full Sun </option>
                 <option value="PartSun">Part Sun</option>
                 <option value="FullShade">Full Shade</option>
+                <option value="none">No Preference</option>
             </select>
-
+<br>
             Water needed <select name="water">
                 <option value="1">1 inch per week </option>
-                <option value="PartSun">2 inches per week</option>
-                <option value="FullShade">3 inches per week</option>
-                <option value="">Any</option>
+                <option value="2">2 inches per week</option>
+                <option value="3">3 inches per week</option>
+                <option value="none">No Preference</option>
             </select>
+            <br>
             Life Cycle <select name=life>
                 <option value="perennial" name="perennila">Perennial </option>
                 <option value="annual" name="annual">Annual</option>
+                <option value="none">No Preference</option>
             </select>
             <br>
             <input type="submit">
