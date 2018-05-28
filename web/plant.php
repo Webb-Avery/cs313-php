@@ -102,20 +102,23 @@ if($sun != 'none')
 
 
 <?php
+
 $water = $_GET["water"];
+$waterExtra = $water;
 if($water != 'none')
 {
     if($water == '1')
     {
         echo "<h1>Plants needing 1 inch of water: </h1>";
         $water = '1 inch';
+        $waterExtra = '1-2 inches';
 
     }
     else if($water == '2')
     {
         echo "<h1>Plants needing 2 inches of water: </h1>";
         $water = '2 inches';
-
+        $waterExtra = '1-2 inches';
     }
     else if($water == '3')
     {
@@ -137,9 +140,10 @@ if($water != 'none')
         <th>Life Cycle </th>
         <th> Plant Type </th></tr>";
 
-    $query = "SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants WHERE waterinches = :water";
+    $query = "SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants WHERE waterinches = :water OR waterinches = :waterExtra";
     $statement = $db->prepare($query);
     $statement->bindValue(":water", $water, PDO::PARAM_STR);
+    $statement->bindValue(":waterExtra", $waterExtra, PDO::PARAM_STR);
     $statement->execute();
 
     foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $plant)
@@ -168,7 +172,66 @@ if($water != 'none')
 ?>
 </table>
 
+<?php
+$life = $_GET["life"];
+if($life != 'none')
+{
+    if($life == 'annual')
+    {
+        echo "<h1>Annual Plants: </h1>";
+        $life = "annual";
 
+    }
+    else if($life == 'Perennial')
+    {
+        echo "<h1>Perennial Plants: </h1>";
+        $life = 'perennial';
+
+    }
+    else 
+    {
+        echo "<h1> Error </h1>";
+    }
+
+    echo "<table style='width:100%'><tr>
+        <th>NAME </th>
+        <th>Sun exposure </th>
+        <th>Water needed per week in inches </th>
+        <th>When to plant </th>
+        <th>Plant Spread </th><th>Plant height </th>
+        <th>Life Cycle </th>
+        <th> Plant Type </th></tr>";
+
+    $query = "SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants WHERE lifecycle = :life";
+    $statement = $db->prepare($query);
+    $statement->bindValue(":life", $life, PDO::PARAM_STR);
+    $statement->execute();
+
+    foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $plant)
+    {
+
+        $name = $plant["name"];
+        $sun = $plant["sunexposure"];
+        $water = $plant["waterinches"];
+        $timeToPlant = $plant["timetoplant"];
+        $spread = $plant["spread"];
+        $height = $plant["height"];
+        $lifeCycle = $plant["lifecycle"];
+        $type = $plant["planttype"];
+        echo"<tr>";
+        echo "<td>$name</td>";
+        echo "<td>$sun</td>";
+        echo "<td>$water</td>";
+        echo "<td>$timeToPlant</td>";
+        echo "<td>$spread</td>";
+        echo "<td>$height</td>";
+        echo "<td>$lifeCycle</td>";
+        echo "<td>$type</td>";
+        echo "</tr>";
+    }
+}
+?>
+</table>
 
 
 
