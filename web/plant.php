@@ -105,16 +105,17 @@ if($sun != 'none')
 $water = $_GET["water"];
 if($water != 'none')
 {
+    $extra = '1-2 inches';
     if($water == '1')
     {
         echo "<h1>Plants needing 1 inch of water: </h1>";
-        $water = "1 inch AND waterinches = '1-2 inches'";
+        $water = '1 inch OR waterinches = $extra';
 
     }
     else if($water == '2')
     {
         echo "<h1>Plants needing 2 inches of water: </h1>";
-        $water = "2 inches AND waterinches = '1-2 inches' ";
+        $water = '2 inches OR waterinches = $extra';
 
     }
     else if($water == '3')
