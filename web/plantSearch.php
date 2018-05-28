@@ -15,9 +15,9 @@
         <form action="plant.php" method="get">
             
             Sun Exposure <select name="sun">
-                <option value="sun">Full Sun </option>
-                <option value="part">Part Sun</option>
-                <option value="shade">Full Shade</option>
+                <option value="Full Sun" name="Full Sun">Full Sun </option>
+                <option value="Part Sun" name="Part Sun">Part Sun</option>
+                <option value="Full Shade" name="Full Shade">Full Shade</option>
             </select>
 
             <input type="submit">
