@@ -50,9 +50,9 @@ catch (PDOException $ex)
 
 $sun = $_GET["sun"];
 $sun = 'Full Sun';
-$query = "SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants";
+$query = "SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants WHERE sunexposure = :sun";
 $statement = $db->prepare($query);
-//$statement->bindValue(":sun", $sun, PDO::PARAM_STR);
+$statement->bindValue(":sun", $sun, PDO::PARAM_STR);
 $statement->execute();
 
 foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $plant)
