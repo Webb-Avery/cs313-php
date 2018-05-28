@@ -62,7 +62,7 @@ catch (PDOException $ex)
         {
            $sun = 'Full Shade';
         }
-        $query .= "WHERE sunexposure = :sun";
+        $query .= " WHERE sunexposure = :sun";
     }
 
     
@@ -87,13 +87,13 @@ catch (PDOException $ex)
     
         if ($sun == "none")
         {
-            $query .= "WHERE waterinches = :water OR waterinches = :waterExtra";
+            $query .= " WHERE waterinches = :water OR waterinches = :waterExtra";
         }
         else {
-            $query .= "'AND' waterinches = :water OR waterinches = :waterExtra";
+            $query .= " WHERE waterinches = :water OR waterinches = :waterExtra";
         }
     }   
-
+    echo "<h1>$query</h1>";
     $statement = $db->prepare($query);
     if ($sun != 'none')
     { 
