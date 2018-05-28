@@ -14,10 +14,10 @@
 
         <form action="plant.php" method="get">
             
-            Sun Exposure <select name= "sun">
-                <option value="Full Sun" name="Full Sun">Full Sun </option>
-                <option value="Part Sun" name="Part Sun">Part Sun</option>
-                <option value="Full Shade" name="Full Shade">Full Shade</option>
+            Sun Exposure <select name="sun">
+                <option value="FullSun">Full Sun </option>
+                <option value="PartSun">Part Sun</option>
+                <option value="FullShade">Full Shade</option>
             </select>
 
             <input type="submit">
