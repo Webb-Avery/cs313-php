@@ -15,7 +15,7 @@
 
         <h2>Login</h2>
         <form method="post" action="myGarden.php">
-            <input type="hidden" id="hidden" value="login"></input>
+            <input type="hidden" id="hidden" name="hidden" value="login"></input>
 
             <label> Username: </label>
             <input type="text" id="username" name="username"></input>
@@ -30,7 +30,7 @@
 
         <h2> Sign Up! </h2>
         <form method="post" action="myGarden.php">
-            <input type="hidden" id="hidden" value="login"></input>
+            <input type="hidden" id="hidden" name="signup"></input>
             <label> First Name: </label>
             <input type="text" id="firstName" name="firstName"></input>
             <br />
