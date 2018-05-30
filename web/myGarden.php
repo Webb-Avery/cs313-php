@@ -59,7 +59,7 @@ catch (PDOException $ex)
                 $statement->bindValue(':username', $username);
                 $statement->bindValue(':password', $password);
                 echo "<p>$statement</p>";
-                $statement->execute();
+                //$statement->execute();
          
                 echo "<p>'Successfull'</p>";
            
