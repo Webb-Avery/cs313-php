@@ -39,7 +39,7 @@ if(type == "signup") {
         $statement->bindValue(':password', $password);
         $statement->execute();
 
-        echo "<p>'Successfull'</p>"
+        echo "<p>'Successfull'</p>";
     
     }
     catch (Exception $ex)
