@@ -13,8 +13,8 @@
 
 
 <?php
-require("dbConnect.php");
-$db = get_db();
+//require("dbConnect.php");
+//$db = get_db();
 
 $type = $_POST['hidden'];
 echo "<p>$type</p>";
@@ -24,7 +24,7 @@ if(type == "signup") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    
+  /*  
     try
     {
         // Add the Scripture
@@ -49,6 +49,7 @@ if(type == "signup") {
         echo "Error with DB. Details: $ex";
         die();
     }
+    */
 }
 ?>
 
