@@ -37,7 +37,7 @@ catch (PDOException $ex)
 
         $type = $_POST['hidden'];
         echo "<p>$type</p>";
-        if(type == 'signup') 
+        if($type == 'signup') 
         {
             echo "<p>here?</p>";
             $firstname = $_POST['firstname'];
@@ -72,6 +72,7 @@ catch (PDOException $ex)
          
             
         }
+        
     
         ?>
         
