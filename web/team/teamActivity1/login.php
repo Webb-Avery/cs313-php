@@ -1,35 +1,27 @@
-<?php
-$current = 'login';
-
-session_start();
-?>
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Login</title>
-        <link href="style.css" rel="stylesheet" type="text/css" />
-    </head>
+<head>
+<link rel="stylesheet" href="main.css">
+    <title>Plants</title>
+</head>
+
+<body>
+    <header id="top"> 
+    <?php include 'nav.php'; ?>
+    </header>
     <body>
-        <?php include($_SERVER['DOCUMENT_ROOT']."/cs313/teamActivity1/nav.php"); ?>
-        <div id="container">
+
+
             <main>
                 <section>
                     <h2>Login</h2>
-                    <form method="post" action="home.php">
-                        <input type="submit" value="Login as Administrator">
-                        <input type="hidden" name="user" value="Administrator">
+                    <form method="post" action="">
+                        <input type="submit" value="Login!">
                     </form>
-                    <form method="post" action="home.php">
-                        <input type="submit" value="Login as Tester">
-                        <input type="hidden" name="user" value="Tester">
+                    <form method="post" action="">
+                        <input type="submit" value="Sign Up!">
                     </form>
                 </section>
             </main>
-        </div>
-        <footer>
-
-        </footer>
     </body>
 </html>
