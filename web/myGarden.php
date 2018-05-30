@@ -17,7 +17,7 @@ require("dbConnect.php");
 $db = get_db();
 
 $type = $_POST['hidden'];
-
+echo "<p>$type</p>";
 if(type == "signup") {
     $firstname = $_POST['firstname'];
     $lasttname = $_POST['lastname'];
