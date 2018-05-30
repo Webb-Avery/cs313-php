@@ -40,7 +40,7 @@ catch (PDOException $ex)
         if($type == 'signup') 
         {
             $firstname = $_POST['firstname'];
-            $lasttname = $_POST['lastname'];
+            $lastname = $_POST['lastname'];
             $username = $_POST['username'];
             $password = $_POST['password'];
 
@@ -73,7 +73,7 @@ catch (PDOException $ex)
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            
+
         }
         
     
