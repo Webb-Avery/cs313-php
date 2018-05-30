@@ -30,7 +30,7 @@
 
         <h2> Sign Up! </h2>
         <form method="post" action="myGarden.php">
-            <input type="hidden" id="hidden" name="signup"></input>
+            <input type="hidden" id="hidden" name="hidden"  value="signup"></input>
             <label> First Name: </label>
             <input type="text" id="firstName" name="firstName"></input>
             <br />
