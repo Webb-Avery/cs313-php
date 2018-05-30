@@ -1,7 +1,3 @@
-<?php
-$type = $_POST['hidden'];
-echo $type;
-?>
 
 <!DOCTYPE html>
 <html>
@@ -14,6 +10,12 @@ echo $type;
     <header id="top"> 
     <?php include 'nav.php'; ?>
     </header>
+
+
+<?php
+$type = $_POST['hidden'];
+echo "<p>$type</p>";
+?>
 
 </body>
 </html>
