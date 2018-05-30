@@ -29,8 +29,8 @@ if(type == "signup") {
     {
         // Add the Scripture
         // We do this by preparing the query with placeholder values
-        $query = 'INSERT INTO users(firstname, lastname, username, 'password') VALUES(:firstname :lastname, :username, :password)';
-        $statement = $db->prepare($query);
+        $query = 'INSERT INTO users(firstname, lastname, username, password) VALUES(:firstname :lastname, :username, :password)';
+        $statement = $db->prepare($query); 
         // Now we bind the values to the placeholders. This does some nice things
         // including sanitizing the input with regard to sql commands.
         $statement->bindValue(':firstname', $firstname);
