@@ -32,11 +32,11 @@
         <form method="post" action="myGarden.php">
             <input type="hidden" id="hidden" name="hidden"  value="signup"></input>
             <label> First Name: </label>
-            <input type="text" id="firstName" name="firstName"></input>
+            <input type="text" id="firstname" name="firstname"></input>
             <br />
 
             <label> Last Name: </label>
-            <input type="text" id="lastName" name="lastName"></input>
+            <input type="text" id="lastname" name="lastname"></input>
             <br />
 
             <label> Username: </label>
