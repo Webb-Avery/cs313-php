@@ -36,15 +36,13 @@ catch (PDOException $ex)
         <?php
 
         $type = $_POST['hidden'];
-        echo "<p>$type</p>";
+    
         if($type == 'signup') 
         {
             $firstname = $_POST['firstname'];
             $lasttname = $_POST['lastname'];
             $username = $_POST['username'];
             $password = $_POST['password'];
-
-            echo "<p>$firstname</p>";
 
             try
             {
@@ -69,6 +67,12 @@ catch (PDOException $ex)
                 die();
             }
          
+            
+        }
+        else {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+
             
         }
         
