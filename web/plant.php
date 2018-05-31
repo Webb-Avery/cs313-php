@@ -149,7 +149,7 @@ catch (PDOException $ex)
         echo "<td>$height</td>";
         echo "<td>$lifeCycle</td>";
         echo "<td>$type</td>";
-        echo "<button type='button'>Add plant to zone</button>"
+        echo "<button type='button'>Add plant to zone</button>";
         echo "</tr>";
     }
 
