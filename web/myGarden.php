@@ -192,9 +192,7 @@ catch (PDOException $ex)
             $water = $zone["waterinches"];
             $hardiness = $zone["hardiness"];
             echo "<h2> Zone: $zoneName</h2>";
-            echo "<p>Sun Exposure: $sun <br> 
-                     Water a week in inches: $water <br>
-                     Hardiness zone: $hardiness<br><p>";
+            
         }
         ?>
     
