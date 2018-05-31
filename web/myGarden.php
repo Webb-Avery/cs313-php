@@ -55,7 +55,18 @@ catch (PDOException $ex)
                 $statement->bindValue(':username', $username);
                 $statement->bindValue(':password', $password);
                 $statement->execute();
+
+                $userId = $db->lastInsertId("users_id_seq");
+
+                $newQuery = 'INSERT INTO gardens(name, userid) VALUES(:garden, :userId)';
            
+                $garden = $firstname . ' Garden';
+                $newStatement = $db->prepare($newQuery); 
+                $newStatement->bindValue(':garden', $garden);
+                $newStatement->bindValue(':userId', $userId);
+                $newStatement->execute();
+
+                echo "<h1>$garden</h1>";
             }
             catch (Exception $ex)
             {
@@ -85,6 +96,21 @@ catch (PDOException $ex)
                 if($password == $correctPassword)
                 {
                     echo "<p>Login Correctly</p>";
+
+                    $userId = $user["id"];
+                    $query = "SELECT name, id FROM gardens WHERE userid = :userId ";
+                    $statement = $db->prepare($query);
+                    $statement->bindValue(":userId", $userId, PDO::PARAM_STR);
+                    $statement->execute();
+                    foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $garden)
+                    {
+                        $gardenName = $garden["name"];
+                        echo "<h1>$gardenName</h1>";
+                    }       
+                }
+                else
+                {
+                    echo "<p>Login failed</p>";
                 }
             }
         }
