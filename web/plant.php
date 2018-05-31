@@ -35,7 +35,7 @@ catch (PDOException $ex)
             $statement = $db->prepare($query);
             
             $statement->bindValue(':zonesid', $zoneId);
-            $statement->bindValue(':plantsid', plantId)
+            $statement->bindValue(':plantsid', plantId);
             $statement->execute();
             ?>
 
