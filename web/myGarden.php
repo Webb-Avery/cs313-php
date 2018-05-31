@@ -189,17 +189,8 @@ catch (PDOException $ex)
 
         foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $zone)
         {
-            $userId = $user["id"];
-            $query = "SELECT name, id FROM gardens WHERE userid = :userId ";
-            $statement = $db->prepare($query);
-            $statement->bindValue(":userId", $userId, PDO::PARAM_STR);
-            $statement->execute();
-            foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $zone)
-            {
-                $zoneName = $zone["name"];
-                echo "<p> Zone: $zoneName</p>";
-            }       
-
+            $zoneName = $zone["name"];
+            echo "<p> Zone: $zoneName</p>";
             
         }
         ?>
