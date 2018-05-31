@@ -1,6 +1,21 @@
 <?php
 session_start();
 
+
+if(!isset($_SESSION["username"])){
+    $_SESSION["username"] = "";
+}
+
+
+if(!isset($_SESSION["gardenId"])){
+    $_SESSION["gardenId"] = "";
+}
+
+
+if(!isset($_SESSION["gardenName"])){
+    $_SESSION["gardenName"] = "";
+}
+
 try
 {
     $dbUrl = getenv('DATABASE_URL');
@@ -26,7 +41,6 @@ catch (PDOException $ex)
 <html>
     <head>
     <link rel="stylesheet" href="main.css">
-        <titlz>My Garden</title>
     </head>
 
     <body>
@@ -44,6 +58,7 @@ catch (PDOException $ex)
             $firstname = $_POST['firstname'];
             $lastname = $_POST['lastname'];
             $username = $_POST['username'];
+            $_SESSION["username"] = $username;
             $password = $_POST['password'];
 
             try
@@ -62,13 +77,18 @@ catch (PDOException $ex)
 
                 $newQuery = 'INSERT INTO gardens(name, userid) VALUES(:garden, :userId)';
            
-                $garden = $firstname . '\'s Garden';
+                $gardenName = $firstname . '\'s Garden';
                 $newStatement = $db->prepare($newQuery); 
                 $newStatement->bindValue(':garden', $garden);
                 $newStatement->bindValue(':userId', $userId);
                 $newStatement->execute();
 
-                echo "<h1>$garden</h1>";
+                $gardenId = $db->lastInsertId("gardens_id_seq");
+
+
+                $_SESSION["gardenName"] = $gardenName;
+                $_SESSION["gardenId"] = $gardenId;
+
             }
             catch (Exception $ex)
             {
@@ -107,7 +127,11 @@ catch (PDOException $ex)
                     foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $garden)
                     {
                         $gardenName = $garden["name"];
-                        echo "<h1>$gardenName</h1>";
+                        $gardenId = $garden["id"];
+                        
+                        $_SESSION["gardenName"] = $gardenName;
+                        $_SESSION["gardenId"] = $gardenId;
+
                     }       
                 }
                 else
@@ -118,17 +142,23 @@ catch (PDOException $ex)
         }
         elseif($type == 'addZone')
         {
+            $gardenName = $_SESSION["gardenName"];
 
         }
         else {
 
             header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
             
+
         }
-    
+
+        
+        echo "<h1>$gardenName<h1>";
         ?>
+    
+        
 
-
+        <h1> 
         <h2> Create Zone </h2>
         <form method="post" action="myGarden.php">
             <input type="hidden" id="hidden" name="hidden"  value="addZone"></input>
