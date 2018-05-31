@@ -157,7 +157,7 @@ catch (PDOException $ex)
         echo "<td>$height</td>";
         echo "<td>$lifeCycle</td>";
         echo "<td>$type</td>";
-        echo "<td><a href='https://sheltered-beyond-43060.herokuapp.com/plantAdd.php?zone=$zoneId&plant=$plantId'>Add a plant to Zone</a> </td>";
+        echo "<td><a href='https://sheltered-beyond-43060.herokuapp.com/plantAdd.php?zone=$zoneId&plant=$plantId'>Add to Zone</a> </td>";
         echo "</tr>";
     }
 
