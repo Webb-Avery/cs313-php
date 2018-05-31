@@ -29,31 +29,7 @@ catch (PDOException $ex)
 <head>
 <link rel="stylesheet" href="main.css">
     <title>Plants</title>
-    <script>
-        function addPlant(plantId)
-        {
-            //This is really ghetto but it works. I am very sure there is a cleaner way to do it. 
-            $_SESSION["plantId"] = plantId;
 
-            <?php
-            
-            $zoneId = $_GET["id"];
-
-
-            $plantId = $_SESSION["plantId"];
-            //$plantId ="1";
-            
-            $query = 'INSERT INTO zonesPlants(zonesid, plantsid) VALUES(:zonesid, :plantsid)';
-            $statement = $db->prepare($query);
-            
-            $statement->bindValue(':zonesid', $zoneId);
-            $statement->bindValue(':plantsid', $plantId);
-            $statement->execute();
-            
-            ?>
-
-        }
-    </script>
 </head>
 
 <body>
@@ -162,6 +138,7 @@ catch (PDOException $ex)
     foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $plant)
     {
 
+        $zoneId = $_GET["zone"];
         $name = $plant["name"];
         $sun = $plant["sunexposure"];
         $water = $plant["waterinches"];
@@ -180,7 +157,7 @@ catch (PDOException $ex)
         echo "<td>$height</td>";
         echo "<td>$lifeCycle</td>";
         echo "<td>$type</td>";
-        echo "<td><button type='button' onclick='addPlant($plantId)'>Add plant to zone</button><td>";
+        echo "<td><a href='https://sheltered-beyond-43060.herokuapp.com/plantAdd.php?zone=$zoneId&plant=$plantId'>Add a plant to Zone</a> </td>";
         echo "</tr>";
     }
 
