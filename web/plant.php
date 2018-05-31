@@ -33,7 +33,7 @@ catch (PDOException $ex)
         function addPlant(plantId)
         {
             //This is really ghetto but it works. I am very sure there is a cleaner way to do it. 
-            //$_SESSION["plantId"] = plantId;
+            $_SESSION["plantId"] = plantId;
 
             <?php
             
