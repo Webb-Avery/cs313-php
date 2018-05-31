@@ -138,7 +138,7 @@ catch (PDOException $ex)
     foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $plant)
     {
 
-        $zoneId = $_GET["zone"];
+        $zoneId = $_GET["id"];
         $name = $plant["name"];
         $sun = $plant["sunexposure"];
         $water = $plant["waterinches"];
