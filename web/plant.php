@@ -40,8 +40,8 @@ catch (PDOException $ex)
             $zoneId = $_GET["id"];
 
 
-            //$plantId = $_SESSION["plantId"];
-            $plantId ="1";
+            $plantId = $_SESSION["plantId"];
+            //$plantId ="1";
             
             $query = 'INSERT INTO zonesPlants(zonesid, plantsid) VALUES(:zonesid, :plantsid)';
             $statement = $db->prepare($query);
