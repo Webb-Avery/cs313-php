@@ -190,8 +190,13 @@ catch (PDOException $ex)
         foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $zone)
         {
             $zoneName = $zone["name"];
-            echo "<p> Zone: $zoneName</p>";
-            
+            $sun = $zone["sunexposure"];
+            $water = $zone["waterinches"];
+            $hardiness = $zone["hardiness"];
+            echo "<h2> Zone: $zoneName</h2>";
+            echo "<p>Sun Exposure: $sun <br> 
+                     Water a week in inches: $water <br>
+                     Hardiness zone: $hardiness<br><p>";
         }
         ?>
     
@@ -217,9 +222,21 @@ catch (PDOException $ex)
             </select>
             <br>
 
-            <label>Hardiness Zone: </label>
-            <input type="text" id="hardiness" name="hardiness"></input>
 
+            Hardiness Zone <select name="hardiness">
+                <option value="1">Zone 1 </option>
+                <option value="2">Zone 2</option>
+                <option value="3">Zone 3</option>
+                <option value="4">Zone 4</option>
+                <option value="5">Zone 5</option>
+                <option value="6">Zone 6</option>
+                <option value="7">Zone 7</option>
+                <option value="8">Zone 8</option>
+                <option value="9">Zone 9</option>
+                <option value="10">Zone 10</option>
+            </select>
+
+            <a target="_blank" href="http://planthardiness.ars.usda.gov/PHZMWeb/">Have no idea what Hardiness Zone you live in? </a>
             <input type="submit" value="Add Zone!">
         </form>
 
