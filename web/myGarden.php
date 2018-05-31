@@ -144,6 +144,32 @@ catch (PDOException $ex)
         {
             $gardenName = $_SESSION["gardenName"];
 
+            $name = $_POST['name'];
+            $sun = $_POST['sun'];
+            $water = $_POST['water'];
+            $hardiness = $_POST['hardiness'];
+
+            try
+            {
+                $query = 'INSERT INTO zones(name, sunexposure, waterinches, hardiness, gardenid) VALUES(:name, :sun, :water, :hardiness, :gardenid)';
+                $statement = $db->prepare($query);
+        
+
+                $statement->bindValue(':name', $name);
+                $statement->bindValue(':sun', $sun);
+                $statement->bindValue(':water', $water);
+                $statement->bindValue(':hardiness', $hardiness);
+                $statement->bindValue(':gardenid', $_SESSION["gardenId"]);
+                $statement->execute();
+
+            }
+            catch (Exception $ex)
+            {
+                // Please be aware that you don't want to output the Exception message in
+                // a production environment
+                echo "Error with DB. Details: $ex";
+                die();
+            }
         }
         else {
 
@@ -154,6 +180,27 @@ catch (PDOException $ex)
 
         
         echo "<h1>$gardenName<h1>";
+
+        $query = "SELECT name, sunexposure, waterinches, hardiness FROM zones WHERE gardenId = :gardenId";
+        $statement = $db->prepare($query);
+        $statement->bindValue(":gardenId", $_SESSION["gardenId"], PDO::PARAM_STR);
+        $statement->execute();
+
+        foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $zone)
+        {
+            $userId = $user["id"];
+            $query = "SELECT name, id FROM gardens WHERE userid = :userId ";
+            $statement = $db->prepare($query);
+            $statement->bindValue(":userId", $userId, PDO::PARAM_STR);
+            $statement->execute();
+            foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $zone)
+            {
+                $zoneName = $zone["name"];
+                echo "<p>$zoneName</p>";
+            }       
+            
+            
+        }
         ?>
     
         
