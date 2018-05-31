@@ -28,6 +28,7 @@ catch (PDOException $ex)
         function addPlant(plantId)
         {
             <?php
+            /*
             $zoneId = $_GET["id"];
 
             
@@ -37,6 +38,7 @@ catch (PDOException $ex)
             $statement->bindValue(':zonesid', $zoneId);
             $statement->bindValue(':plantsid', plantId);
             $statement->execute();
+            */
             ?>
 
         }
