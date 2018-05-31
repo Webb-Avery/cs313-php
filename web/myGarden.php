@@ -179,8 +179,6 @@ catch (PDOException $ex)
 
         
         echo "<h1>$gardenName<h1>";
-        $gID = $_SESSION["gardenId"];
-        echo "<p>$gID</p>";
 
         $query = "SELECT name, sunexposure, waterinches, hardiness FROM zones WHERE gardenId = :gardenId";
         $statement = $db->prepare($query);
@@ -236,7 +234,7 @@ catch (PDOException $ex)
                 <option value="10">Zone 10</option>
             </select>
 
-            <a target="_blank" href="http://planthardiness.ars.usda.gov/PHZMWeb/">Have no idea what Hardiness Zone you live in? </a>
+            <a target="_blank" href="http://planthardiness.ars.usda.gov/PHZMWeb/">Have no idea what Hardiness Zone you live in? </a><br> <br>
             <input type="submit" value="Add Zone!">
         </form>
 
