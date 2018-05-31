@@ -117,7 +117,6 @@ catch (PDOException $ex)
                 $correctPassword = $user["password"];
                 if($password == $correctPassword)
                 {
-                    echo "<p>Login Correctly</p>";
 
                     $userId = $user["id"];
                     $query = "SELECT name, id FROM gardens WHERE userid = :userId ";
@@ -180,6 +179,8 @@ catch (PDOException $ex)
 
         
         echo "<h1>$gardenName<h1>";
+        $gID = $_SESSION["gardenId"];
+        echo "<p>$gID</p>";
 
         $query = "SELECT name, sunexposure, waterinches, hardiness FROM zones WHERE gardenId = :gardenId";
         $statement = $db->prepare($query);
@@ -196,7 +197,7 @@ catch (PDOException $ex)
             foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $zone)
             {
                 $zoneName = $zone["name"];
-                echo "<p>$zoneName</p>";
+                echo "<p> Zone: $zoneName</p>";
             }       
 
             
