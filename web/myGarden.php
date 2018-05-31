@@ -190,9 +190,10 @@ catch (PDOException $ex)
             $zoneName = $zone["name"];
             $sun = $zone["sunexposure"];
             $water = $zone["waterinches"];
+            $id = $zone["id"];
             echo "<h2> Zone: $zoneName</h2>";
 
-            echo "<a href='https://sheltered-beyond-43060.herokuapp.com/plant.php?sun=$sun&water=$water'>Add a plant to this Zone</a> <br>";
+            echo "<a href='https://sheltered-beyond-43060.herokuapp.com/plant.php?sun=$sun&water=$water&id=$id'>Add a plant to this Zone</a> <br>";
             
         }
         ?>

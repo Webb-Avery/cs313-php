@@ -24,6 +24,23 @@ catch (PDOException $ex)
 <head>
 <link rel="stylesheet" href="main.css">
     <title>Plants</title>
+    <script>
+        function addPlant(plantId)
+        {
+            <?php
+            $zoneId = $_GET["id"];
+
+            
+            $query = 'INSERT INTO zonesPlants(zonesid, plantsid) VALUES(:zonesid, :plantsid)';
+            $statement = $db->prepare($query);
+            
+            $statement->bindValue(':zonesid', $zoneId);
+            $statement->bindValue(':plantsid', plantId)
+            $statement->execute();
+            ?>
+
+        }
+    </script>
 </head>
 
 <body>
@@ -45,7 +62,7 @@ catch (PDOException $ex)
         <th>Life Cycle </th>
         <th> Plant Type </th></tr>";
 
-    $query = "SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants";
+    $query = "SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype, id FROM plants";
 
     $sun = $_GET["sun"];
     if($sun != 'none')
@@ -140,6 +157,7 @@ catch (PDOException $ex)
         $height = $plant["height"];
         $lifeCycle = $plant["lifecycle"];
         $type = $plant["planttype"];
+        $plantId = $plant["id"];
         echo"<tr>";
         echo "<td>$name</td>";
         echo "<td>$sun</td>";
@@ -149,7 +167,7 @@ catch (PDOException $ex)
         echo "<td>$height</td>";
         echo "<td>$lifeCycle</td>";
         echo "<td>$type</td>";
-        echo "<td><button type='button'>Add plant to zone</button><td>";
+        echo "<td><button type='button' onclick='addPlant($plantId)'>Add plant to zone</button><td>";
         echo "</tr>";
     }
 

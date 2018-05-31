@@ -21,7 +21,7 @@ CREATE TABLE gardens
 (
 id SERIAL PRIMARY KEY,
 "name" VARCHAR(100) NOT NULL,
-zoneId INT NOT NULL REFERENCES zones(id)
+userId INT NOT NULL REFERENCES users(id)
 );
 
 CREATE TABLE zones
@@ -30,6 +30,7 @@ id SERIAL PRIMARY KEY,
 "name" VARCHAR(100) NOT NULL,
 sunExposure VARCHAR(50),
 waterInches VARCHAR(100),
+gardenId INT NOT NULL REFERENCES gardens(id),
 hardiness integer
 );
 
