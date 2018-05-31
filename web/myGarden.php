@@ -74,7 +74,7 @@ catch (PDOException $ex)
                 $statement->execute();
 
                 $userId = $db->lastInsertId("users_id_seq");
-
+/*
                 $newQuery = 'INSERT INTO gardens(name, userid) VALUES(:garden, :userId)';
            
                 $gardenName = $firstname . '\'s Garden';
@@ -84,7 +84,7 @@ catch (PDOException $ex)
                 $newStatement->execute();
 
                 $gardenId = $db->lastInsertId("gardens_id_seq");
-
+*/
 
                 $_SESSION["gardenName"] = $gardenName;
                 $_SESSION["gardenId"] = $gardenId;
@@ -198,7 +198,7 @@ catch (PDOException $ex)
                 $zoneName = $zone["name"];
                 echo "<p>$zoneName</p>";
             }       
-            
+
             
         }
         ?>
