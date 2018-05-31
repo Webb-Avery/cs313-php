@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 try
 {
     $dbUrl = getenv('DATABASE_URL');
@@ -24,7 +26,7 @@ catch (PDOException $ex)
 <html>
     <head>
     <link rel="stylesheet" href="main.css">
-        <title>Plants</title>
+        <titlz>My Garden</title>
     </head>
 
     <body>
@@ -60,7 +62,7 @@ catch (PDOException $ex)
 
                 $newQuery = 'INSERT INTO gardens(name, userid) VALUES(:garden, :userId)';
            
-                $garden = $firstname . ' Garden';
+                $garden = $firstname . '\'s Garden';
                 $newStatement = $db->prepare($newQuery); 
                 $newStatement->bindValue(':garden', $garden);
                 $newStatement->bindValue(':userId', $userId);
@@ -78,7 +80,7 @@ catch (PDOException $ex)
          
             
         }
-        else {
+        if($type == 'login') {
             $username = $_POST['username'];
             $password = $_POST['password'];
 
@@ -114,9 +116,44 @@ catch (PDOException $ex)
                 }
             }
         }
-    
+        if($type == 'addZone')
+        {
+            
+        }
+        else {
+
+            header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+            
+        }
     
         ?>
+
+
+        <h2> Create Zone </h2>
+        <form method="post" action="myGarden.php">
+            <input type="hidden" id="hidden" name="hidden"  value="addZone"></input>
+            <label> Zone Name: </label>
+            <input type="text" id="name" name="name"></input>
+            <br />
+            Sun Exposure <select name="sun">
+                <option value="fullsun">Full Sun </option>
+                <option value="partsun">Part Sun</option>
+                <option value="fullshade">Full Shade</option>
+            </select>
+            
+            <br>
+            Water needed <select name="water">
+                <option value="1">1 inch per week </option>
+                <option value="2">2 inches per week</option>
+            </select>
+            <br>
+
+            <label>Hardiness Zone: </label>
+            <input type="text" id="hardiness" name="hardiness"></input>
+
+            <input type="submit" value="Add Zone!">
+        </form>
+
         
     </body>
 </html>
