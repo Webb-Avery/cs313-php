@@ -74,17 +74,17 @@ catch (PDOException $ex)
                 $statement->execute();
 
                 $userId = $db->lastInsertId("users_id_seq");
-/*
+
                 $newQuery = 'INSERT INTO gardens(name, userid) VALUES(:garden, :userId)';
            
                 $gardenName = $firstname . '\'s Garden';
                 $newStatement = $db->prepare($newQuery); 
-                $newStatement->bindValue(':garden', $garden);
+                $newStatement->bindValue(':garden', $gardenName);
                 $newStatement->bindValue(':userId', $userId);
                 $newStatement->execute();
 
                 $gardenId = $db->lastInsertId("gardens_id_seq");
-*/
+
 
                 $_SESSION["gardenName"] = $gardenName;
                 $_SESSION["gardenId"] = $gardenId;
