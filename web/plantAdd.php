@@ -12,3 +12,9 @@ $statement->execute();
 header("Location: https://sheltered-beyond-43060.herokuapp.com/myGarden.php" );
 
 ?>
+
+<html>
+    <head>
+    </head>
+    
+</html>
