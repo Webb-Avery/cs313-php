@@ -1,7 +1,6 @@
 <?php
 $zoneId = $_GET["zone"];
 $plantId = $_GET["plant"];
-echo "<p>$zoneId, $plantId</p>";
 $query = 'INSERT INTO zonesPlants(zonesid, plantsid) VALUES(:zonesid, :plantsid)';
 $statement = $db->prepare($query);
             
