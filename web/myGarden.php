@@ -80,7 +80,7 @@ catch (PDOException $ex)
          
             
         }
-        if($type == 'login') {
+        elseif($type == 'login') {
             $username = $_POST['username'];
             $password = $_POST['password'];
 
@@ -116,9 +116,9 @@ catch (PDOException $ex)
                 }
             }
         }
-        if($type == 'addZone')
+        elseif($type == 'addZone')
         {
-            
+
         }
         else {
 
