@@ -9,9 +9,9 @@ $statement->bindValue(':zonesid', $zoneId);
 $statement->bindValue(':plantsid', $plantId);
 
 $statement->execute();
-
-header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
 echo "<p>$zoneId, $plantId</p>";
+header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+
 exit;
 
 ?>
