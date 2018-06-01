@@ -193,14 +193,14 @@ catch (PDOException $ex)
             $id = $zone["id"];
             echo "<h2> Zone: $zoneName</h2>";
 
-            $query = "SELECT plants.name FROM ((plants INNER JOIN zonesPlants ON plants.id = zonesPlants.plantsid) 
+            $query2 = "SELECT * FROM ((plants INNER JOIN zonesPlants ON plants.id = zonesPlants.plantsid) 
                       INNER JOIN zones ON zonesPlants.zonesid = zones.id) 
                       WHERE zones.id = :zoneId";
-            $statement = $db->prepare($query);
-            $statement->bindValue(":zoneId", $id);
-            $statement->execute();
+            $statement2 = $db->prepare($query2);
+            $statement2->bindValue(":zoneId", $id);
+            $statement2->execute();
     
-            foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $plants)
+            foreach ($statement2->fetchAll(PDO::FETCH_ASSOC) as $plants)
             {
                 echo "<p>$plants</p>"
 
