@@ -193,13 +193,7 @@ catch (PDOException $ex)
             $id = $zone["id"];
             echo "<h2> Zone: $zoneName</h2>";
 
-            echo "<table style='width:100%'><tr>
-                <th>NAME </th>
-                <th>When to plant </th>
-                <th>Plant Spread </th>
-                <th>Plant height </th>
-                <th>Life Cycle </th>
-                <th> Plant Type </th></tr>";
+           
 
             $query2 = "SELECT plants.name, plants.timetoplant, plants.height, plants.spread, plants.lifecycle, plants.planttype 
                       FROM ((plants INNER JOIN zonesPlants ON plants.id = zonesPlants.plantsid) 
@@ -208,9 +202,21 @@ catch (PDOException $ex)
             $statement2 = $db->prepare($query2);
             $statement2->bindValue(":zoneId", $id);
             $statement2->execute();
-    
+            $first = true;
             foreach ($statement2->fetchAll(PDO::FETCH_ASSOC) as $plant)
             {
+             
+                if ($first)
+                {
+                    echo "<table style='width:100%'><tr>
+                    <th>NAME </th>
+                    <th>When to plant </th>
+                    <th>Plant Spread </th>
+                    <th>Plant height </th>
+                    <th>Life Cycle </th>
+                    <th> Plant Type </th></tr>";
+                    $first =false;
+                }
                 $name = $plant["name"];
                 $timeToPlant = $plant["timetoplant"];
                 $spread = $plant["spread"];
