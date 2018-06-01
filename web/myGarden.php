@@ -202,10 +202,10 @@ catch (PDOException $ex)
             $statement2 = $db->prepare($query2);
             $statement2->bindValue(":zoneId", $id);
             $statement2->execute();
-            $first = true;
+           // $first = true;
             foreach ($statement2->fetchAll(PDO::FETCH_ASSOC) as $plant)
             {
-             
+             /*
                 if ($first)
                 {
                     echo "<table style='width:100%'><tr>
@@ -217,6 +217,7 @@ catch (PDOException $ex)
                     <th> Plant Type </th></tr>";
                     $first =false;
                 }
+                */
                 $name = $plant["name"];
                 $timeToPlant = $plant["timetoplant"];
                 $spread = $plant["spread"];
