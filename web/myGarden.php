@@ -193,7 +193,16 @@ catch (PDOException $ex)
             $id = $zone["id"];
             echo "<h2> Zone: $zoneName</h2>";
 
-            $query2 = "SELECT * FROM ((plants INNER JOIN zonesPlants ON plants.id = zonesPlants.plantsid) 
+            echo "<table style='width:100%'><tr>
+                <th>NAME </th>
+                <th>When to plant </th>
+                <th>Plant Spread </th>
+                <th>Plant height </th>
+                <th>Life Cycle </th>
+                <th> Plant Type </th></tr>";
+
+            $query2 = "SELECT plants.name, plants.timetoplant, plants.height, plants.spread, plants.lifecycle, plants.planttype 
+                      FROM ((plants INNER JOIN zonesPlants ON plants.id = zonesPlants.plantsid) 
                       INNER JOIN zones ON zonesPlants.zonesid = zones.id) 
                       WHERE zones.id = :zoneId";
             $statement2 = $db->prepare($query2);
@@ -202,8 +211,20 @@ catch (PDOException $ex)
     
             foreach ($statement2->fetchAll(PDO::FETCH_ASSOC) as $plants)
             {
-                $plantname = $plants['name'];
-                echo "<p>$plantname</p>";
+                $name = $plant["name"];
+                $timeToPlant = $plant["timetoplant"];
+                $spread = $plant["spread"];
+                $height = $plant["height"];
+                $lifeCycle = $plant["lifecycle"];
+                $type = $plant["planttype"];
+                echo"<tr>";
+                echo "<td>$name</td>";
+                echo "<td>$timeToPlant</td>";
+                echo "<td>$spread</td>";
+                echo "<td>$height</td>";
+                echo "<td>$lifeCycle</td>";
+                echo "<td>$type</td>";
+                echo "</tr>";
 
             }
 
