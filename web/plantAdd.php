@@ -1,3 +1,4 @@
+<html>
 <?php
 $zoneId = $_GET["zone"];
 $plantId = $_GET["plant"];
@@ -13,3 +14,5 @@ $statement->execute();
 header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
 
 ?>
+
+</html>
