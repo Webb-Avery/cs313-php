@@ -191,7 +191,7 @@ catch (PDOException $ex)
             $sun = $zone["sunexposure"];
             $water = $zone["waterinches"];
             $id = $zone["id"];
-            echo "<h2> Zone: $zoneName</h2>";
+            echo "<h2> Zone: $zoneName, $id</h2>";
 
 
             $query2 = "SELECT zones.id, plants.name, plants.timetoplant, plants.height, plants.spread, plants.lifecycle, plants.planttype 
