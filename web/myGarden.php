@@ -202,7 +202,8 @@ catch (PDOException $ex)
     
             foreach ($statement2->fetchAll(PDO::FETCH_ASSOC) as $plants)
             {
-                echo "<p>$plants</p>";
+                $plantname = $plants['plants.name'];
+                echo "<p>$plantname</p>";
 
             }
 
