@@ -31,6 +31,6 @@ $statement->bindValue(':plantsid', $plantId);
 
 $statement->execute();
 
-header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+header("Location: https://sheltered-beyond-43060.herokuapp.com/myGarden.php" );
 
 ?>
