@@ -194,7 +194,7 @@ catch (PDOException $ex)
             echo "<h2> Zone: $zoneName</h2>";
 
 
-            $query2 = "SELECT plants.name, plants.timetoplant, plants.height, plants.spread, plants.lifecycle, plants.planttype 
+            $query2 = "SELECT zones.id, plants.name, plants.timetoplant, plants.height, plants.spread, plants.lifecycle, plants.planttype 
                       FROM ((plants INNER JOIN zonesPlants ON plants.id = zonesPlants.plantsid) 
                       INNER JOIN zones ON zonesPlants.zonesid = zones.id) 
                       WHERE zones.id = :zoneId";
@@ -223,14 +223,14 @@ catch (PDOException $ex)
                 $height = $plant["height"];
                 $lifeCycle = $plant["lifecycle"];
                 $type = $plant["planttype"];
-                $plantId = $plant["id"];
+                $zone = $plant["id"];
                 echo"<tr>";
                 echo "<td>$name</td>";
                 echo "<td>$timeToPlant</td>";
                 echo "<td>$spread</td>";
                 echo "<td>$height</td>";
                 echo "<td>$lifeCycle</td>";
-                echo "<td>$type</td>";
+                echo "<td>$zone</td>";
                 echo "</tr>";
 
             }
