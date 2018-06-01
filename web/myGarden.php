@@ -171,8 +171,8 @@ catch (PDOException $ex)
             }
         }
         else {
-
-            header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+            $gardenName = $_SESSION["gardenName"];
+            //header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
             
 
         }
