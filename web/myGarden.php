@@ -234,6 +234,7 @@ catch (PDOException $ex)
                 echo "</tr>";
 
             }
+            echo "</table>";
 
             echo "<a href='https://sheltered-beyond-43060.herokuapp.com/plant.php?sun=$sun&water=$water&id=$id'>Add a plant to this Zone</a> <br>";
             
