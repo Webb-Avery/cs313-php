@@ -193,6 +193,19 @@ catch (PDOException $ex)
             $id = $zone["id"];
             echo "<h2> Zone: $zoneName</h2>";
 
+            $query = "SELECT plants.name FROM ((plants INNER JOIN zonesPlants ON plants.id = zonesPlants.plantsid) 
+                      INNER JOIN zones ON zonesPlants.zonesid = zones.id) 
+                      WHERE zones.id = :zoneId";
+            $statement = $db->prepare($query);
+            $statement->bindValue(":zoneId", $id);
+            $statement->execute();
+    
+            foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $plants)
+            {
+                echo "<p>$plants</p>"
+
+            }
+
             echo "<a href='https://sheltered-beyond-43060.herokuapp.com/plant.php?sun=$sun&water=$water&id=$id'>Add a plant to this Zone</a> <br>";
             
         }
