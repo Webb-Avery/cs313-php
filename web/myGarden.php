@@ -209,7 +209,7 @@ catch (PDOException $ex)
             $statement2->bindValue(":zoneId", $id);
             $statement2->execute();
     
-            foreach ($statement2->fetchAll(PDO::FETCH_ASSOC) as $plants)
+            foreach ($statement2->fetchAll(PDO::FETCH_ASSOC) as $plant)
             {
                 $name = $plant["name"];
                 $timeToPlant = $plant["timetoplant"];
