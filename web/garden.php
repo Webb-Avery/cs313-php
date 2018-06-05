@@ -53,6 +53,10 @@ if(!isset($_SESSION['username'])){
             <input type="password" id="password" name="password"></input>
             <br />
 
+            <label> Confirm Password: </label>
+            <input type="password" id="passwordConfirm" name="passwordConfirm"></input>
+            <br />
+
             <input type="submit" value="Sign Up!">
         </form>
     </body>
