@@ -205,6 +205,7 @@ foreach ($db->query('SELECT name, sunexposure, waterinches, timetoplant, height,
     echo "<td>$height</td>";
     echo "<td>$lifeCycle</td>";
     echo "<td>$type</td>";
+    echo "<td><a href='https://sheltered-beyond-43060.herokuapp.com/plantAdd.php?zone=$zoneId&plant=$plantId'>Add to Zone</a> </td>";
     echo "</tr>";
 }
 ?>
