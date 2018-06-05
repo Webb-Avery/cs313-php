@@ -42,7 +42,7 @@ catch (PDOException $ex)
 
     echo "<h1>Plants perfect for your zone!</h1>";
     
-    echo "<table style='width:100%'><tr>
+    echo "<table style='width:80%'><tr>
         <th>NAME </th>
         <th>Sun exposure </th>
         <th>Water needed per week in inches </th>
@@ -173,7 +173,7 @@ catch (PDOException $ex)
 
 
 <h1> Browse All Plants (These might not be perfect for your zones) </h1>
-<table>
+<table style='width:80%'>
     <tr>
         <th>NAME </th>
         <th>Sun exposure </th>
