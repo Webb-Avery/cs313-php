@@ -60,8 +60,17 @@ catch (PDOException $ex)
             $username = $_POST['username'];
             $_SESSION["username"] = $username;
             $password = $_POST['password'];
+            $confirmPass = $_POST['passwordConfirm'];
+
+            if ($password != $confirmPass)
+            {
+                header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+                die();
+            }
+
+
+
             $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-            echo "$password, $passwordHash";
 
 
             try
