@@ -60,7 +60,7 @@ catch (PDOException $ex)
             $username = $_POST['username'];
             $_SESSION["username"] = $username;
             $password = $_POST['password'];
-            $passwordHash = password_hash();
+            $passwordHash = password_hash($password);
 
 
             try
