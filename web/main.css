@@ -19,7 +19,7 @@ form {
     padding-left: 10%;
 }
 
-input[type=text], select {
+input {
     width: 40%;
     padding: 12px 20px;
     margin: 8px 0;
