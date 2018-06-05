@@ -184,7 +184,7 @@ catch (PDOException $ex)
         <th> Plant Type </th>
     </tr>
     <?php
-foreach ($db->query('SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype FROM plants') as $plant)
+foreach ($db->query('SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype, id FROM plants') as $plant)
 {
 
     $name = $plant["name"];
@@ -195,6 +195,7 @@ foreach ($db->query('SELECT name, sunexposure, waterinches, timetoplant, height,
     $height = $plant["height"];
     $lifeCycle = $plant["lifecycle"];
     $type = $plant["planttype"];
+    $plantId = $plant["id"];
     echo"<tr>";
     echo "<td>$name</td>";
     echo "<td>$sun</td>";
