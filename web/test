@@ -1,0 +1,16 @@
+   // $first = true;
+            foreach ($statement2->fetchAll(PDO::FETCH_ASSOC) as $plant)
+            {
+             /*
+                if ($first)
+                {
+                    echo "<table style='width:100%'><tr>
+                    <th>NAME </th>
+                    <th>When to plant </th>
+                    <th>Plant Spread </th>
+                    <th>Plant height </th>
+                    <th>Life Cycle </th>
+                    <th> Plant Type </th></tr>";
+                    $first =false;
+                }
+                */

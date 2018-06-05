@@ -60,6 +60,8 @@ catch (PDOException $ex)
             $username = $_POST['username'];
             $_SESSION["username"] = $username;
             $password = $_POST['password'];
+            $passwordHash = password_hash();
+
 
             try
             {
@@ -70,7 +72,7 @@ catch (PDOException $ex)
                 $statement->bindValue(':firstname', $firstname);
                 $statement->bindValue(':lastname', $lastname);
                 $statement->bindValue(':username', $username);
-                $statement->bindValue(':password', $password);
+                $statement->bindValue(':password', $passwordHash);
                 $statement->execute();
 
                 $userId = $db->lastInsertId("users_id_seq");
@@ -113,9 +115,9 @@ catch (PDOException $ex)
 
             foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $user)
             {
-        
+
                 $correctPassword = $user["password"];
-                if($password == $correctPassword)
+                if(password_veryify($password, $correctPassword))
                 {
 
                     $userId = $user["id"];

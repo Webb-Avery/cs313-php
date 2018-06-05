@@ -4,6 +4,9 @@ session_start();
 if(!isset($_SESSION["plantId"])){
     $_SESSION["plantId"] = "";
 }
+if(!isset($_SESSION["zoneId"])){
+    $_SESSION["zoneId"] = "";
+}
 try
 {
     $dbUrl = getenv('DATABASE_URL');
