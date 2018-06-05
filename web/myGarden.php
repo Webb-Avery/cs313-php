@@ -64,11 +64,13 @@ catch (PDOException $ex)
 
             $regex= "((?=.*\d)(?=.*[a-zA-Z]){7,30})";
 
-            if (preg_match($regex, $password))
+            if (!preg_match($regex, $password))
             {
+                echo "Failed";
                 header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
                 die();
             }
+
 
             if ($password != $confirmPass)
             {
