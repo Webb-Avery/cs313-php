@@ -62,6 +62,14 @@ catch (PDOException $ex)
             $password = $_POST['password'];
             $confirmPass = $_POST['passwordConfirm'];
 
+            $regex= "((?=.*\d)(?=.*[a-zA-Z]){7,30})";
+
+            if (preg_match($regex, $password))
+            {
+                header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+                die();
+            }
+
             if ($password != $confirmPass)
             {
                 header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
