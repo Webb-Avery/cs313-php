@@ -50,7 +50,7 @@ if(!isset($_SESSION['username'])){
             <br />
             
             <label> Password: </label>
-            <input type="text" id="password" name="password"></input>
+            <input type="password" id="password" name="password"></input>
             <br />
 
             <input type="submit" value="Sign Up!">
