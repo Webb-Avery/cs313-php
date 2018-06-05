@@ -16,7 +16,7 @@ h2 {
 }
 
 
-table, div, form, input {
+table, div {
     background-color: cadetblue;
     text-align: center;
     margin: auto;
