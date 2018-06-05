@@ -37,7 +37,6 @@ catch (PDOException $ex)
     <?php include 'nav.php'; ?>
     </header>
 
-    <h1>Plants</h1>
     <?php
 
     echo "<h1>Plants perfect for your zone!</h1>";
