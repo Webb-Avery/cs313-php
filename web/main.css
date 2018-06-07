@@ -34,7 +34,7 @@ form {
     width: 50%;
 }
 
-label, submit {
+label, submit, select {
     display: inline-block;
     width:200px;
     text-align: right;
