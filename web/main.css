@@ -1,5 +1,5 @@
 body {
-    background: azure;
+    background: rgb(166, 205,147);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20px;
     padding-left: 30px;
@@ -23,6 +23,13 @@ table, div {
     padding: 10px;
     border-radius: 4px;
     width: 1000px;
+}
+
+form {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 4px;
 }
 
 #puppy {
