@@ -25,12 +25,11 @@ table, div {
     width: 1000px;
 }
 
-label, input {
-    text-align: center;
-    margin: auto;
-    padding: 10px;
+input {
     border-radius: 4px;
+    align-content: center;
 }
+
 
 #puppy {
     display: inline-block;
