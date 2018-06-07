@@ -11,13 +11,12 @@ h1 {
 }
 
 h2 {
-    text-decoration: underline;
-    padding-left: 10%;
+    font-size: 14;
 }
 
 
 table, div {
-    background-color: cadetblue;
+    background-color: rgb(255, 230, 153);
     text-align: center;
     margin: auto;
     padding: 10px;
@@ -25,7 +24,16 @@ table, div {
     width: 1000px;
 }
 
-label {
+form {
+    background-color: rgb(255, 230, 153);
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 4px;
+    width: 80%;
+}
+
+label, submit {
     display: inline-block;
     width:150px;
     text-align: right;
