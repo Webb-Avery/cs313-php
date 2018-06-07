@@ -25,7 +25,7 @@ table, div {
     width: 1000px;
 }
 
-form {
+label, input {
     text-align: center;
     margin: auto;
     padding: 10px;
