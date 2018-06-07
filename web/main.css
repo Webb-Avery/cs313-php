@@ -25,9 +25,10 @@ table, div {
     width: 1000px;
 }
 
-input {
-    border-radius: 4px;
-    align-content: center;
+label {
+    display: inline-block;
+    width:100px;
+    text-align: right;
 }
 
 
