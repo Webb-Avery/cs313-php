@@ -19,8 +19,9 @@ if(!isset($_SESSION['username'])){
     </header>
     <body>
 
-        <h2>Login</h2>
+        
         <form method="post" action="myGarden.php">
+             <h2>Login</h2>
             <input type="hidden" id="hidden" name="hidden" value="login"></input>
 
             <label> Username: </label>
@@ -34,8 +35,9 @@ if(!isset($_SESSION['username'])){
             <input type="submit" value="Login!">
         </form>
 
-        <h2> Sign Up! </h2>
+        
         <form method="post" action="myGarden.php">
+            <h2> Sign Up! </h2>
             <input type="hidden" id="hidden" name="hidden"  value="signup"></input>
             <label> First Name: </label>
             <input type="text" id="firstname" name="firstname"></input>
