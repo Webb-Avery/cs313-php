@@ -34,7 +34,7 @@ if(!isset($_SESSION['username'])){
 
             <input type="submit" value="Login!">
         </form>
-
+<br /> <br />
         
         <form method="post" action="myGarden.php">
             <h2> Sign Up! </h2>
