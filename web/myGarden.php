@@ -137,7 +137,7 @@ catch (PDOException $ex)
             {
 
                 $correctPassword = $user["password"];
-                if(password_veryify($password, $correctPassword))
+                if(password_verify($password, $correctPassword))
                 {
 
                     $userId = $user["id"];
