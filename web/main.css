@@ -130,7 +130,7 @@ nav {
     padding: 10px;
     font-size: 20;
     text-align: center;
-    display: flex;
+    margin-right: 0%;
 }
 
 li {
