@@ -29,6 +29,12 @@ if(!isset($_SESSION['usernameError'])){
     $_SESSION["usernameError"] = "";
 } 
 
+if($_GET["zone"] == "")
+{
+  header("Location: https://sheltered-beyond-43060.herokuapp.com/myGarden.php" );
+  die();
+}
+
 
 try
 {
@@ -61,7 +67,6 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $zone)
     $sun = $zone["sunexposure"];
     $water = $zone["waterinches"];
     $id = $zone["id"];
-    echo "<h2> Zone: $zoneName</h2>";
 }  
 ?>
 
@@ -77,8 +82,9 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $zone)
             <?php include 'nav.php'; ?>
         </header>
 
-
-<h2> Create a New Zone </h2>
+<?php
+echo "<h2> Current Zone: $zoneName, Sun: $sun, Water: $water "
+?>
 <form method="post" action="myGarden.php">
     <input type="hidden" id="hidden" name="hidden"  value="addZone"></input>
     <label> Zone Name: </label>
@@ -96,7 +102,7 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $zone)
         <option value="2">2 inches per week</option>
     </select>
     <br>
-    <input class='submit' type="submit" value="Add Zone!">
+    <input class='submit' type="submit" value="Update Zone">
 </form>
 <br>
 </body>
