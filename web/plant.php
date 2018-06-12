@@ -81,12 +81,12 @@ catch (PDOException $ex)
         if($water == '1')
         {
             $water = '1 inch';
-            $waterExtra = '1-2 inches';
+            $waterExtra = '1-2 inch';
         }
         else if($water == '2')
         {
             $water = '2 inches';
-            $waterExtra = '1-2 inches';
+            $waterExtra = '1-2 inch';
         }
     
         if ($sun == "none")
