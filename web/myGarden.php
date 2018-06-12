@@ -312,7 +312,8 @@ catch (PDOException $ex)
 
             
         }
-
+        $test = $_SESSION["login"];
+        echo "<p>TESTING $test";
         if ($_SESSION["login"] != "true")
         {
             header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
