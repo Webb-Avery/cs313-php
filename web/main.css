@@ -11,8 +11,13 @@ h1 {
 }
 
 h2, .nav {
-    font-size: 14;
+    border: none;
+    color: black;
+    padding: 8px 10px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
 }
 
 
@@ -31,7 +36,7 @@ h2, .nav {
 nav {
     background-color:  rgb(255, 230, 153); 
 }
-input {
+input, select {
     background-color: rgb(255, 230, 153);
     border: 1px solid;
     color:black;
