@@ -114,7 +114,8 @@ table, div {
 }
 
 th {
-    text-decoration-color: rgb(205, 147, 166);
+    border-bottom-color: rgb(205, 147, 166);
+    border-bottom: 1px;
 }
 
 form {
