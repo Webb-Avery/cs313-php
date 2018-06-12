@@ -47,7 +47,7 @@ if(!isset($_SESSION['usernameError'])){
  
 if($_SESSION['usernameError'] != ""){
     $error = $_SESSION['usernameError'];
-    echo "<p>$error</p>";
+    echo "<h3>$error</h3>";
 }      
 ?>
         <form method="post" action="myGarden.php">

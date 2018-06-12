@@ -15,6 +15,11 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    font-size: 15;
+    text-decoration-color: darkred;
+    text-align: center;
+}
 
 table, div {
     background-color: rgb(255, 230, 153);
