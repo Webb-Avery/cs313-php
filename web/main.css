@@ -39,7 +39,7 @@ h2 {
     border-radius: 10px;
 }
 .zone {
-    background-color: rgb(138, 222, 255);
+    background-color: rgb(119, 180, 88);
     border: none;
     color: white;
     padding: 8px 10px;
@@ -50,10 +50,12 @@ h2 {
     border-radius: 10px;
     align-content: center;
     align-self: center;
+    align-items: center;
 }
 
 nav {
-    background-color:  rgb(255, 230, 153); 
+    width: 100%;
+    background-color:  rgb(119, 180, 88); 
 }
 input, select {
     background-color: rgb(255, 230, 153);
