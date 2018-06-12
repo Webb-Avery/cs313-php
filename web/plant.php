@@ -42,7 +42,7 @@ catch (PDOException $ex)
 
     <?php
 
-    echo "<h1>Plants perfect for your zone!</h1>";
+    echo "<h2>Plants perfect for your zone!</h2>";
     
     echo "<table style='width:90%'><tr>
         <th>NAME </th>
@@ -209,7 +209,7 @@ catch (PDOException $ex)
 
 
 
-<h1> Browse All Plants (These might not be perfect for your zones) </h1>
+<h2> Browse All Plants (These might not be perfect for your zones) </h2>
 <table style='width:90%'>
     <tr>
         <th>NAME </th>

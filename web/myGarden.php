@@ -69,12 +69,13 @@ catch (PDOException $ex)
     
         if($type == 'signup') 
         {
-            $firstname = $_POST['firstname'];
-            $lastname = $_POST['lastname'];
-            $username = $_POST['username'];
+            
+            $firstname = htmlspecialchars($_POST['firstname']);
+            $lastname = htmlspecialchars($_POST['lastname']);
+            $username = htmlspecialchars($_POST['username']);
             $_SESSION["username"] = $username;
-            $password = $_POST['password'];
-            $confirmPass = $_POST['passwordConfirm'];
+            $password = htmlspecialchars($_POST['password']);
+            $confirmPass = htmlspecialchars($_POST['passwordConfirm']);
 
             $regex= "((?=.*\d)(?=.*[a-zA-Z]){7,30})";
 
@@ -217,7 +218,7 @@ catch (PDOException $ex)
         {
             $gardenName = $_SESSION["gardenName"];
 
-            $name = $_POST['name'];
+            $name = htmlspecialchars($_POST['name']);
             $sun = $_POST['sun'];
             $water = $_POST['water'];
             $hardiness = $_POST['hardiness'];
