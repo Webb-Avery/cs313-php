@@ -56,6 +56,9 @@ catch (PDOException $ex)
     $query = "SELECT name, sunexposure, waterinches, timetoplant, height, spread, lifecycle, planttype, id FROM plants";
 
     $sun = $_GET["sun"];
+    $water = $_GET["water"];   
+    $life = $_GET["life"];
+    
     if($sun != 'none')
     {
         echo "TESTING $sun";
@@ -75,7 +78,7 @@ catch (PDOException $ex)
         echo "$query";
     }
 
-    $life = $_GET["life"];
+    
     if($life == '')
     {
         $life = 'none';
@@ -93,7 +96,7 @@ catch (PDOException $ex)
         }
 
         
-        if ($sun == "none" && $water == "none")
+        if ($sun == "none" and $water == "none")
         {
             $query .= " WHERE lifecycle = :life";
         }
@@ -102,7 +105,7 @@ catch (PDOException $ex)
         }
     }
     
-    $water = $_GET["water"];    
+    
     $waterExtra = $water;
     if($water == '')
     {
