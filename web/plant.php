@@ -122,10 +122,10 @@ catch (PDOException $ex)
     }
 
     $statement = $db->prepare($query);
-    echo "<p>$statement</p>";
     if ($sun != 'none')
     { 
         $statement->bindValue(":sun", $sun, PDO::PARAM_STR);
+        echo "$sun";
     }
     if ($water != 'none')
     {
