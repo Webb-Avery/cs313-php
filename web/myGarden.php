@@ -251,6 +251,14 @@ catch (PDOException $ex)
         }
 
         
+        $test = $_SESSION["login"];
+        echo "<p>TESTING $test";
+        if ($_SESSION["login"] != "true")
+        {
+            header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+            die();
+        }
+        
         echo "<h1>$gardenName<h1>";
 
         $query = "SELECT id, name, sunexposure, waterinches FROM zones WHERE gardenId = :gardenId";
@@ -311,13 +319,6 @@ catch (PDOException $ex)
             echo "</table>";
 
             
-        }
-        $test = $_SESSION["login"];
-        echo "<p>TESTING $test";
-        if ($_SESSION["login"] != "true")
-        {
-            header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
-            die();
         }
 
 
