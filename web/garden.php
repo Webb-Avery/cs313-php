@@ -73,7 +73,7 @@ if($_SESSION['usernameError'] != ""){
             <input type="password" id="passwordConfirm" name="passwordConfirm"></input>
             <br />
 
-            <a><input class="submit" type="submit" value="Sign Up!"></a>
+            <a><input class="submit" type="submit">Sign Up!</a>
         </form>
     </body>
 </html>
