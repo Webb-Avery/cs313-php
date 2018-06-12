@@ -71,7 +71,6 @@ catch (PDOException $ex)
 
             if (!preg_match($regex, $password))
             {
-                echo "Failed";
                 header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
                 die();
             }
@@ -82,6 +81,13 @@ catch (PDOException $ex)
                 header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
                 $_SESSION["usernameError"] = "Passwords did not match. Try again";
                 die();
+            }
+
+            if ($_SESSION['username'] == '') {
+           
+                header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+                die();
+           
             }
 
 
