@@ -62,7 +62,9 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $zone)
     $water = $zone["waterinches"];
     $id = $zone["id"];
     echo "<h2> Zone: $zoneName</h2>";
+}  
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -80,9 +82,7 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $zone)
 <form method="post" action="myGarden.php">
     <input type="hidden" id="hidden" name="hidden"  value="addZone"></input>
     <label> Zone Name: </label>
-    <?php
-    echo "<input type='text' id='name' name='name' value=$zoneName></input>";
-    ?>
+    <?php    echo "<input type='text' id='name' name='name' value=$zoneName></input>"; ?>
     <br />
     Sun Exposure <select name="sun">
         <option value="fullsun">Full Sun </option>
