@@ -261,7 +261,6 @@ catch (PDOException $ex)
                 $statement->bindValue(':sun', $sun);
                 $statement->bindValue(':water', $water);
                 $statement->bindValue(':zoneId', $zoneId);
-                $statement->bindValue(':gardenid', $_SESSION["gardenId"]);
                 $statement->execute();
 
             }
