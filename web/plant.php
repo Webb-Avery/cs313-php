@@ -58,6 +58,7 @@ catch (PDOException $ex)
     $sun = $_GET["sun"];
     if($sun != 'none')
     {
+        echo "TESTING $sun";
        if($sun == 'fullsun')
        {
             $sun = 'Full Sun';
@@ -71,6 +72,7 @@ catch (PDOException $ex)
            $sun = 'Full Shade';
         }
         $query .= " WHERE sunexposure = :sun";
+        echo "$query";
     }
 
     
