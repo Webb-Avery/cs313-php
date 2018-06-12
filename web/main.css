@@ -17,18 +17,21 @@ h2 {
 
 
 a, .submit {
-    background-color: green;
+    background-color: rgb(255, 192, 0);
     border: none;
     color: white;
     padding: 15px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
+    font-size: 18px;
     margin: 4px 2px;
-    border-radius: 18px;
+    border-radius: 10px;
 }
 
+header {
+    background-color: rgb(255, 192, 0); 
+}
 input {
     background-color: rgb(255, 230, 153);
     border: 1px solid;
