@@ -43,7 +43,7 @@ h4 {
 
 
 .submit {
-    background-color: rgb(147, 205, 167);
+    background-color: rgb(147, 185, 205);
     border: none;
     color: black;
     padding: 8px 10px;
@@ -54,7 +54,7 @@ h4 {
     border-radius: 10px;
 }
 .zone {
-    background-color: rgb(205, 147, 166);
+    background-color: rgb(147, 185, 205);
     border: none;
     color: black;
     padding: 8px 10px;
@@ -63,16 +63,18 @@ h4 {
     display: inherit;
     font-size: 18px;
     border-radius: 10px;
-    width: 30%;
+    width: 25%;
+    align-content: center;
+    align-items: center;
 
 }
 
 nav {
     width: 100%;
-    background-color:  rgb(205, 152, 147); 
+    background-color:  rgb(205, 166, 147); 
 }
 input, select {
-    background-color: rgb(147, 205, 167);
+    background-color: rgb(147, 185, 205);
     border: 1px solid;
     color:black;
     padding: 4px 1px;
