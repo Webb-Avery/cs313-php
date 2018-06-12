@@ -23,7 +23,7 @@ h2 {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 
@@ -46,7 +46,7 @@ input, select {
     background-color: rgb(255, 230, 153);
     border: 1px solid;
     color:black;
-    
+    padding: 4px 1px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
