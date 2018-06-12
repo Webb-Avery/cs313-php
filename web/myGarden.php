@@ -16,6 +16,11 @@ if(!isset($_SESSION["gardenName"])){
     $_SESSION["gardenName"] = "";
 }
 
+
+if(!isset($_SESSION['usernameError'])){
+    $_SESSION["usernameError"] = "";
+} 
+
 try
 {
     $dbUrl = getenv('DATABASE_URL');
@@ -75,13 +80,40 @@ catch (PDOException $ex)
             if ($password != $confirmPass)
             {
                 header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+                $_SESSION["usernameError"] = "Passwords did not match. Try again";
                 die();
             }
 
 
 
             $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+        
 
+            try
+            {
+                $query = 'SELECT username FROM users where username = :user';
+                $statement = $db->prepare($query);
+                $statement->bindValue(':user', $username);
+                $statement->execute();
+                $result = $statement->get_result();
+
+                if(!$result)
+                {
+                    header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+                    $_SESSION["usernameError"] = "Username was already taken. Please try again.";
+                    die();
+                }
+                
+
+            }
+            catch (Exception $ex)
+            {
+                // Please be aware that you don't want to output the Exception message in
+                // a production environment
+                echo "Error with DB. Details: $ex";
+                die();
+            }
+            
 
             try
             {

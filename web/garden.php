@@ -3,7 +3,14 @@ session_start();
 
 if(!isset($_SESSION['username'])){
     $_SESSION["username"] = "";
-}
+} 
+
+
+if(!isset($_SESSION['usernameError'])){
+    $_SESSION["username"] = "";
+} 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +42,14 @@ if(!isset($_SESSION['username'])){
             <input type="submit" value="Login!">
         </form>
 <br /> <br />
-        
+
+ <?
+ 
+if(isset($_SESSION['usernameError'])){
+    $error = $_SESSION['usernameError'];
+    echo "<p>$error</p>";
+}      
+?>
         <form method="post" action="myGarden.php">
             <h2> Sign Up! </h2>
             <input type="hidden" id="hidden" name="hidden"  value="signup"></input>
