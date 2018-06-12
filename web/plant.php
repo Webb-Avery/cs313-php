@@ -78,6 +78,10 @@ catch (PDOException $ex)
     
     $water = $_GET["water"];    
     $waterExtra = $water;
+    if($water == '')
+    {
+        $water = 'none';
+    }
     if($water != 'none')
     {
         if($water == '1')
