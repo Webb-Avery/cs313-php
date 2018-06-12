@@ -127,12 +127,15 @@ td {
 }
 
 nav {
+    padding: 10px;
+    font-size: 20;
     text-align: center;
+    display: flex;
 }
 
 li {
     display: inline;
-    font-size: 20;
+    margin-right: 50px;
 }
 
 
