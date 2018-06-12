@@ -75,6 +75,32 @@ catch (PDOException $ex)
         echo "$query";
     }
 
+    $life = $_GET["life"];
+    if($life == '')
+    {
+        $life = 'none';
+    }
+    if($life != 'none')
+    {
+        if($life == 'annual')
+        {
+            $life = "Annual";
+        }
+        else if($life == 'perennial')
+        {
+            $life = 'Perennial';
+        
+        }
+
+        
+        if ($sun == "none" && $water == "none")
+        {
+            $query .= " WHERE lifecycle = :life";
+        }
+        else {
+            $query .= " AND lifecycle = :life";
+        }
+    }
     
     $water = $_GET["water"];    
     $waterExtra = $water;
@@ -125,6 +151,10 @@ catch (PDOException $ex)
         if ($sun == "none" && $water == "none")
         {
             $query .= " WHERE lifecycle = :life";
+        }
+        elseif(water == "none")
+        {
+            
         }
         else {
             $query .= " AND lifecycle = :life";
