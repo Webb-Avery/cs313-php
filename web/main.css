@@ -29,8 +29,8 @@ a, .submit {
     border-radius: 10px;
 }
 
-header {
-    background-color: rgb(255, 192, 0); 
+nav {
+    background-color:  rgb(255, 230, 153); 
 }
 input {
     background-color: rgb(255, 230, 153);
