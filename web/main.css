@@ -43,7 +43,7 @@ h4 {
 
 
 .submit {
-    background-color: rgb(147, 185, 205);
+    background-color: rgb(166, 205,147);
     border: none;
     color: black;
     padding: 8px 10px;
@@ -60,7 +60,7 @@ h4 {
     padding: 8px 10px;
     text-align: center;
     text-decoration: none;
-    display: inherit;
+    display: block;
     font-size: 18px;
     border-radius: 10px;
     width: 25%;
@@ -74,7 +74,7 @@ nav {
     background-color:  rgb(205, 166, 147); 
 }
 input, select {
-    background-color: rgb(147, 185, 205);
+    background-color: rgb(166, 205,147);
     border: 1px solid;
     color:black;
     padding: 4px 1px;
