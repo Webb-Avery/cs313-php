@@ -48,6 +48,7 @@ h2 {
     display: inline-block;
     font-size: 18px;
     border-radius: 10px;
+    align-content: center;
 }
 
 nav {
