@@ -53,7 +53,7 @@ h2 {
     padding: 8px 10px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inherit;
     font-size: 18px;
     border-radius: 10px;
     align-content: center;

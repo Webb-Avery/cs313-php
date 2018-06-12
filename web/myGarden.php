@@ -3,7 +3,9 @@ session_start();
 
 
 if(!isset($_SESSION["username"])){
-    $_SESSION["username"] = "";
+    
+    header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+    die();
 }
 
 
@@ -71,24 +73,20 @@ catch (PDOException $ex)
 
             if (!preg_match($regex, $password))
             {
+                $_SESSION["usernameError"] = "Passwords must be at least 8 characters long and contain a number. Try again";
                 header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+                
                 die();
             }
 
 
             if ($password != $confirmPass)
             {
-                header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
                 $_SESSION["usernameError"] = "Passwords did not match. Try again";
+                header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
                 die();
             }
 
-            if ($_SESSION['username'] == '') {
-           
-                header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
-                die();
-           
-            }
 
 
 
@@ -103,8 +101,9 @@ catch (PDOException $ex)
                 $statement->execute();
                 while ($row = $statement->fetch())
                 {
-                    header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
                     $_SESSION["usernameError"] = "Username  was already taken. Please try again.";
+                    header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+                    
                     die();
                 }
                 
@@ -193,6 +192,11 @@ catch (PDOException $ex)
                 }
                 else
                 {
+                    
+                    $_SESSION["usernameError"] = "Username and Password did not match.";
+                    header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+                    
+                    die();
                     echo "<p>Login failed</p>";
                 }
             }
@@ -266,7 +270,7 @@ catch (PDOException $ex)
             {
                 if ($first == "true")
                 {
-                    echo "<table style='width:100%'><tr>
+                    echo "<table style='width:80%'><tr>
                     <th>NAME </th>
                     <th>When to plant </th>
                     <th>Plant Spread </th>
