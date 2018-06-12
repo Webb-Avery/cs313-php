@@ -16,7 +16,7 @@ h2 {
 }
 
 
-a {
+a, .submit {
     background-color: green;
     border: none;
     color: white;
