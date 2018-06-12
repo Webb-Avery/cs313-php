@@ -47,6 +47,20 @@ h2 {
     font-size: 18px;
     border-radius: 10px;
 }
+
+
+.change {
+    background-color: rgb(205, 166, 147);
+    border: none;
+    color: black;
+    padding: 4px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
 .zone {
     background-color: rgb(147, 185, 205);
     border: none;
