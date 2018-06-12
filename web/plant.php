@@ -100,7 +100,7 @@ catch (PDOException $ex)
             $query .= " WHERE waterinches = :water OR waterinches = :waterExtra";
         }
         else {
-            $query .= " AND waterinches = :water OR waterinches = :waterExtra";
+            $query .= " AND waterinches = :water OR waterinches = :waterExtra AND sunexposure = :sun";
         }
     } 
     
