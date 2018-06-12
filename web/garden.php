@@ -39,7 +39,7 @@ if(!isset($_SESSION['usernameError'])){
             <input type="text" id="password" name="password"></input>
             <br />
 
-            <input class="submit" type="submit" value="Login!">
+            <a><input class="submit" type="submit" value="Login!"></a>
         </form>
 <br /> <br />
 
@@ -73,7 +73,7 @@ if($_SESSION['usernameError'] != ""){
             <input type="password" id="passwordConfirm" name="passwordConfirm"></input>
             <br />
 
-            <input class="submit" type="submit" value="Sign Up!">
+            <a><input class="submit" type="submit" value="Sign Up!"></a>
         </form>
     </body>
 </html>
