@@ -120,7 +120,7 @@ catch (PDOException $ex)
             {
                 // Please be aware that you don't want to output the Exception message in
                 // a production environment
-                echo "Error with DB. Details: $ex";
+                //echo "Error with DB. Details: $ex";
                 die();
             }
             
@@ -159,7 +159,7 @@ catch (PDOException $ex)
             {
                 // Please be aware that you don't want to output the Exception message in
                 // a production environment
-                echo "Error with DB. Details: $ex";
+                //echo "Error with DB. Details: $ex";
                 die();
             }
          
@@ -221,18 +221,16 @@ catch (PDOException $ex)
             $name = htmlspecialchars($_POST['name']);
             $sun = $_POST['sun'];
             $water = $_POST['water'];
-            $hardiness = $_POST['hardiness'];
 
             try
             {
-                $query = 'INSERT INTO zones(name, sunexposure, waterinches, hardiness, gardenid) VALUES(:name, :sun, :water, :hardiness, :gardenid)';
+                $query = 'INSERT INTO zones(name, sunexposure, waterinches, gardenid) VALUES(:name, :sun, :water, :gardenid)';
                 $statement = $db->prepare($query);
         
 
                 $statement->bindValue(':name', $name);
                 $statement->bindValue(':sun', $sun);
                 $statement->bindValue(':water', $water);
-                $statement->bindValue(':hardiness', $hardiness);
                 $statement->bindValue(':gardenid', $_SESSION["gardenId"]);
                 $statement->execute();
 
@@ -241,7 +239,37 @@ catch (PDOException $ex)
             {
                 // Please be aware that you don't want to output the Exception message in
                 // a production environment
-                echo "Error with DB. Details: $ex";
+                // echo "Error with DB. Details: $ex";
+                die();
+            }
+        }
+        elseif($type == 'updateZone')
+        {
+            $gardenName = $_SESSION["gardenName"];
+
+            $name = htmlspecialchars($_POST['name']);
+            $sun = $_POST['sun'];
+            $water = $_POST['water'];
+            $zoneId = $_POST['hidden2'];
+            try
+            {
+                $query = 'UPDATE zones SET name = :name, sunexposure = :sun, waterinches = :water WHERE id = :zoneId';
+                $statement = $db->prepare($query);
+        
+
+                $statement->bindValue(':name', $name);
+                $statement->bindValue(':sun', $sun);
+                $statement->bindValue(':water', $water);
+                $statement->bindValue(':zoneId', $zoneId);
+                $statement->bindValue(':gardenid', $_SESSION["gardenId"]);
+                $statement->execute();
+
+            }
+            catch (Exception $ex)
+            {
+                // Please be aware that you don't want to output the Exception message in
+                // a production environment
+               // echo "Error with DB. Details: $ex";
                 die();
             }
         }

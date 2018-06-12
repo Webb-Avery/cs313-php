@@ -83,10 +83,12 @@ foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $zone)
         </header>
 
 <?php
-echo "<h2> Current Zone: $zoneName, Sun: $sun, Water: $water "
+echo "<h2> Current Zone: $zoneName, Sun: $sun, Water: $water ";
 ?>
 <form method="post" action="myGarden.php">
-    <input type="hidden" id="hidden" name="hidden"  value="addZone"></input>
+    <input type="hidden" id="hidden" name="hidden"  value="updateZone"></input>
+
+    <?php echo "<input type='hidden2' id='hidden2' name='hidden2'  value=$id></input>"; ?>
     <label> Zone Name: </label>
     <?php    echo "<input type='text' id='name' name='name' value=$zoneName></input>"; ?>
     <br />
