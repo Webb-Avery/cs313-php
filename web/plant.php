@@ -99,6 +99,10 @@ catch (PDOException $ex)
     } 
     
     $life = $_GET["life"];
+    if($life == '')
+    {
+        $life = 'none';
+    }
     if($life != 'none')
     {
         if($life == 'annual')
