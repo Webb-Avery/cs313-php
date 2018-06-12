@@ -15,9 +15,12 @@ h2 {
     text-align: center;
 }
 
+a {
+    color: darkcyan;
+}
 h3 {
     font-size: 15;
-    text-decoration-color: darkred;
+    color: darkred;
     text-align: center;
 }
 
