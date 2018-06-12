@@ -257,7 +257,31 @@ catch (PDOException $ex)
             die();
         }
         
-        echo "<h1>$gardenName<h1>";
+        echo "<h4>$gardenName<h4>";
+?>
+         
+        <h2> Create Zone </h2>
+        <form method="post" action="myGarden.php">
+            <input type="hidden" id="hidden" name="hidden"  value="addZone"></input>
+            <label> Zone Name: </label>
+            <input type="text" id="name" name="name" placeholder="Front Garden"></input>
+            <br />
+            Sun Exposure <select name="sun">
+                <option value="fullsun">Full Sun </option>
+                <option value="partsun">Part Sun</option>
+                <option value="fullshade">Full Shade</option>
+            </select>
+            
+            <br>
+            Water needed <select name="water">
+                <option value="1">1 inch per week </option>
+                <option value="2">2 inches per week</option>
+            </select>
+            <br>
+            <input class='submit' type="submit" value="Add Zone!">
+        </form>
+        <br>
+<?
 
         $query = "SELECT id, name, sunexposure, waterinches FROM zones WHERE gardenId = :gardenId";
         $statement = $db->prepare($query);
@@ -288,7 +312,7 @@ catch (PDOException $ex)
             {
                 if ($first == "true")
                 {
-                    echo "<table style='width:80%'><tr>
+                    echo "<table style='width:65%'><tr>
                     <th>NAME </th>
                     <th>When to plant </th>
                     <th>Plant Spread </th>
@@ -326,29 +350,7 @@ catch (PDOException $ex)
     
         
 
-        <h1> 
-        <h2> Create Zone </h2>
-        <form method="post" action="myGarden.php">
-            <input type="hidden" id="hidden" name="hidden"  value="addZone"></input>
-            <label> Zone Name: </label>
-            <input type="text" id="name" name="name"></input>
-            <br />
-            Sun Exposure <select name="sun">
-                <option value="fullsun">Full Sun </option>
-                <option value="partsun">Part Sun</option>
-                <option value="fullshade">Full Shade</option>
-            </select>
-            
-            <br>
-            Water needed <select name="water">
-                <option value="1">1 inch per week </option>
-                <option value="2">2 inches per week</option>
-            </select>
-            <br>
-            <input class='submit' type="submit" value="Add Zone!">
-        </form>
-<br>
-<br>
+        
         
     </body>
 </html>
