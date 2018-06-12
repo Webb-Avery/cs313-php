@@ -10,7 +10,13 @@ h1 {
     text-align: center;
 }
 
-h2, .nav {
+h2 {
+
+    font-size: 14;
+    text-align: center;
+}
+
+.nav {
     border: none;
     color: black;
     padding: 8px 10px;
@@ -44,7 +50,7 @@ input, select {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     border-radius: 4px;
     margin: 2px 1px;
 }
