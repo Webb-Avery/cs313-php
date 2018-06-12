@@ -58,7 +58,7 @@ catch (PDOException $ex)
     $sun = $_GET["sun"];
     $water = $_GET["water"];   
     $life = $_GET["life"];
-    
+
     if($sun != 'none')
     {
         echo "TESTING $sun";
@@ -151,15 +151,8 @@ catch (PDOException $ex)
         }
 
         
-        if ($sun == "none" && $water == "none")
-        {
-            $query .= " WHERE lifecycle = :life";
-        }
-        elseif($water == "none")
-        {
-
-        }
-        else {
+        if ($sun != "none" && $water != "none")
+     {
             $query .= " AND lifecycle = :life";
         }
     }
