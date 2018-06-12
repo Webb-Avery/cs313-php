@@ -16,7 +16,7 @@ h2 {
 }
 
 
-a, .sumbit {
+a {
     background-color: green;
     border: none;
     color: white;
@@ -27,6 +27,18 @@ a, .sumbit {
     font-size: 20px;
     margin: 4px 2px;
     border-radius: 18px;
+}
+
+input {
+    background-color: rgb(255, 192, 0);
+    border: 2px solid;
+    color: black;
+    padding: 10px 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1px;
 }
 
 h3 {
