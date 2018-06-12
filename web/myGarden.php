@@ -257,7 +257,7 @@ catch (PDOException $ex)
             die();
         }
         
-        echo "<h4>$gardenName<h4>";
+        echo "<h1>$gardenName<h1>";
 ?>
          
         <h2> Create a New Zone </h2>
