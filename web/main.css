@@ -56,7 +56,8 @@ h2 {
     display: inherit;
     font-size: 18px;
     border-radius: 10px;
-    
+    width: 30%;
+
 }
 
 nav {
