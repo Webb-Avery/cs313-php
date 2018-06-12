@@ -2,10 +2,12 @@
 session_start();
 
 
+if(!isset($_SESSION["login"])){
+    $_SESSION["login"] = "";
+}
+
 if(!isset($_SESSION["username"])){
-    
-    header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
-    die();
+    $_SESSION["username"] = "";
 }
 
 
@@ -13,6 +15,10 @@ if(!isset($_SESSION["gardenId"])){
     $_SESSION["gardenId"] = "";
 }
 
+
+if(!isset($_SESSION["username"])){
+    $_SESSION["username"] = "";
+}
 
 if(!isset($_SESSION["gardenName"])){
     $_SESSION["gardenName"] = "";
@@ -22,6 +28,7 @@ if(!isset($_SESSION["gardenName"])){
 if(!isset($_SESSION['usernameError'])){
     $_SESSION["usernameError"] = "";
 } 
+
 
 try
 {
@@ -89,7 +96,6 @@ catch (PDOException $ex)
 
 
 
-
             $passwordHash = password_hash($password, PASSWORD_DEFAULT);
         
 
@@ -120,6 +126,7 @@ catch (PDOException $ex)
 
             try
             {
+                $_SESSION["login"] = "true";
                 $query = 'INSERT INTO users(firstname, lastname, username, password) VALUES(:firstname, :lastname, :username, :password)';
                 $statement = $db->prepare($query);
         
@@ -175,6 +182,10 @@ catch (PDOException $ex)
                 if(password_verify($password, $correctPassword))
                 {
 
+                    
+
+                    $_SESSION["login"] = "true";
+
                     $userId = $user["id"];
                     $query = "SELECT name, id FROM gardens WHERE userid = :userId ";
                     $statement = $db->prepare($query);
@@ -194,6 +205,7 @@ catch (PDOException $ex)
                 {
                     
                     $_SESSION["usernameError"] = "Username and Password did not match.";
+                    $_SESSION["login"] = "false";
                     header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
                     
                     die();
@@ -300,6 +312,16 @@ catch (PDOException $ex)
 
             
         }
+
+        if ($_SESSION["login"] != "true")
+        {
+            header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+            die();
+        }
+
+
+
+
         ?>
     
         
