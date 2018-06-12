@@ -115,7 +115,7 @@ table, div {
 
 th {
     border-bottom-color: rgb(205, 147, 166);
-    border-bottom: 1px;
+    border-bottom: 2px solid;
 }
 
 form {
