@@ -31,13 +31,14 @@ a {
 
 input {
     background-color: rgb(255, 230, 153);
-    border: 2px solid;
-    color: rgb(255,192, 0);
+    border: 1px solid;
+    color:black;
     padding: 10px 1px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 8px;
     margin: 2px 1px;
 }
 
