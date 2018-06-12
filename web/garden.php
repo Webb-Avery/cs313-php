@@ -25,7 +25,7 @@ if(!isset($_SESSION['usernameError'])){
     <?php include 'nav.php'; ?>
     </header>
     <body>
-
+<br>
         
         <form method="post" action="myGarden.php">
              <h2>Login</h2>
