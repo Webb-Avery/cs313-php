@@ -10,7 +10,7 @@ h1 {
     text-align: center;
 }
 
-h2 {
+h2, .nav {
     font-size: 14;
     text-align: center;
 }
