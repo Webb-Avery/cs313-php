@@ -127,6 +127,7 @@ catch (PDOException $ex)
         }
     }
 
+    echo "<br>$query";
     $statement = $db->prepare($query);
     if ($sun != 'none')
     { 
