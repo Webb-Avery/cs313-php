@@ -46,11 +46,11 @@ input, select {
     background-color: rgb(255, 230, 153);
     border: 1px solid;
     color:black;
-    padding: 10px 1px;
+    
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 4px;
     margin: 2px 1px;
 }
