@@ -113,10 +113,6 @@ table, div {
     width: 80%;
 }
 
-th {
-    border-bottom-color: rgb(205, 147, 166);
-    border-bottom: 2px solid;
-}
 
 form {
     background-color: rgb(205, 147, 166);
