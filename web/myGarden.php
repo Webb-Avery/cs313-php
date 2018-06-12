@@ -248,7 +248,9 @@ catch (PDOException $ex)
             $sun = $zone["sunexposure"];
             $water = $zone["waterinches"];
             $id = $zone["id"];
-            echo "<h2> Zone: $zoneName</h2>";
+            echo "<h2> Zone: $zoneName";
+            echo "<a class='zone' href='https://sheltered-beyond-43060.herokuapp.com/plant.php?sun=$sun&water=$water&id=$id'>Add a plant to this Zone</a> </h2><br>";
+          
 
 
             $query2 = "SELECT plants.name, plants.timetoplant, plants.height, plants.spread, plants.lifecycle, plants.planttype 
@@ -292,7 +294,6 @@ catch (PDOException $ex)
             }
             echo "</table>";
 
-            echo "<a class='submit' href='https://sheltered-beyond-43060.herokuapp.com/plant.php?sun=$sun&water=$water&id=$id'>Add a plant to this Zone</a> <br>";
             
         }
         ?>

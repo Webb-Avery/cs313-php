@@ -38,6 +38,17 @@ h2 {
     font-size: 18px;
     border-radius: 10px;
 }
+.zone {
+    background-color: rgb(255, 230, 153);
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 10px;
+}
 
 nav {
     background-color:  rgb(255, 230, 153); 
