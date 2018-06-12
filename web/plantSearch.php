@@ -33,7 +33,7 @@
                 <option value="none">No Preference</option>
             </select>
             <br>
-            <input type="submit">
+            <input class = "submit" type="submit">
         </form>
 
         </body>

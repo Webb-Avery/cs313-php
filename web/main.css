@@ -16,7 +16,7 @@ h2 {
 }
 
 
-input, a {
+a, .sumbit {
     background-color: green;
     border: none;
     color: white;
