@@ -45,7 +45,7 @@ if(!isset($_SESSION['usernameError'])){
 
  <?
  
-if(isset($_SESSION['usernameError'])){
+if($_SESSION['usernameError'] != ""){
     $error = $_SESSION['usernameError'];
     echo "<p>$error</p>";
 }      
