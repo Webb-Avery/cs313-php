@@ -91,7 +91,7 @@ catch (PDOException $ex)
 
             try
             {
-                $statement = $db->query('SELECT username FROM users where username = :user');                
+                $statement = $db->query('SELECT username, id FROM users where username = :user');                
 
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                 {
