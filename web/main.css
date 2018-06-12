@@ -59,6 +59,7 @@ h2 {
     display: inline-block;
     font-size: 18px;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .zone {
@@ -104,7 +105,7 @@ h3 {
 }
 
 table, div {
-    background-color: rgb(205, 147, 166);
+    background-color: rgb(147, 185, 205);
     text-align: center;
     margin: auto;
     padding: 10px;
