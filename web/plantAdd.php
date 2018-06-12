@@ -25,7 +25,7 @@ if($_GET["zone"] == "" or $_GET["plant"] == "")
 {
 
 
-  header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+  header("Location: https://sheltered-beyond-43060.herokuapp.com/myGarden.php" );
   die();
 }
 $zoneId = $_GET["zone"];
