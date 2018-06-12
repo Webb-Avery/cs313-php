@@ -94,7 +94,7 @@ catch (PDOException $ex)
             $query .= " WHERE waterinches = :water OR waterinches = :waterExtra";
         }
         else {
-            $query .= " AND waterinches = :water OR waterinches = :waterExtra";
+            $query .= " AND WHERE waterinches = :water OR waterinches = :waterExtra";
         }
     } 
     
@@ -117,7 +117,7 @@ catch (PDOException $ex)
             $query .= " WHERE lifecycle = :life";
         }
         else {
-            $query .= " AND lifecycle = :life";
+            $query .= " AND WHERE lifecycle = :life";
         }
     }
 
@@ -125,7 +125,6 @@ catch (PDOException $ex)
     if ($sun != 'none')
     { 
         $statement->bindValue(":sun", $sun, PDO::PARAM_STR);
-        echo "$sun";
     }
     if ($water != 'none')
     {
