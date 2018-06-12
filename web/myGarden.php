@@ -260,7 +260,7 @@ catch (PDOException $ex)
         echo "<h4>$gardenName<h4>";
 ?>
          
-        <h2> Create Zone </h2>
+        <h2> Create a New Zone </h2>
         <form method="post" action="myGarden.php">
             <input type="hidden" id="hidden" name="hidden"  value="addZone"></input>
             <label> Zone Name: </label>
