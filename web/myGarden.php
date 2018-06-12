@@ -91,8 +91,10 @@ catch (PDOException $ex)
 
             try
             {
-                $statement = $db->query('SELECT username FROM users where username = :user');                
+                $statement = $db->prepare('SELECT username FROM users where username = :user');                
 
+                $statement->bindValue(':user', $username);
+                $statement->execute();
                 while ($row = $statement->fetch())
                 {
                     header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
