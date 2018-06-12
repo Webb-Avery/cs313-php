@@ -292,7 +292,7 @@ catch (PDOException $ex)
             }
             echo "</table>";
 
-            echo "<a href='https://sheltered-beyond-43060.herokuapp.com/plant.php?sun=$sun&water=$water&id=$id'>Add a plant to this Zone</a> <br>";
+            echo "<a class='submit' href='https://sheltered-beyond-43060.herokuapp.com/plant.php?sun=$sun&water=$water&id=$id'>Add a plant to this Zone</a> <br>";
             
         }
         ?>
@@ -318,7 +318,7 @@ catch (PDOException $ex)
                 <option value="2">2 inches per week</option>
             </select>
             <br>
-            <input type="submit" value="Add Zone!">
+            <input class='submit' type="submit" value="Add Zone!">
         </form>
 
         

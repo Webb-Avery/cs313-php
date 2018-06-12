@@ -16,7 +16,7 @@ h2, .nav {
 }
 
 
-a, .submit {
+.submit {
     background-color: rgb(255, 192, 0);
     border: none;
     color: white;
