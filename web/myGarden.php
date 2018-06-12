@@ -91,16 +91,12 @@ catch (PDOException $ex)
 
             try
             {
-                $query = 'SELECT username FROM users where username = :user';
-                $statement = $db->prepare($query);
-                $statement->bindValue(':user', $username);
-                $statement->execute();
-                $result = $statement->get_result();
+                $statement = $db->query('SELECT username FROM users where username = :user');                
 
-                if(!$result)
+                while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                 {
                     header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
-                    $_SESSION["usernameError"] = "Username was already taken. Please try again.";
+                    $_SESSION["usernameError"] = "Username  was already taken. Please try again.";
                     die();
                 }
                 
