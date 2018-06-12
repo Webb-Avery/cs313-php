@@ -50,7 +50,7 @@ catch (PDOException $ex)
   die();
 }
 
-$query = "SELECT id, name, sunexposure, waterinches FROM zones WHERE zoneId = :zoneId";
+$query = "SELECT id, name, sunexposure, waterinches FROM zones WHERE id = :zoneId";
 $statement = $db->prepare($query);
 $statement->bindValue(":zoneId", $_GET["zone"], PDO::PARAM_STR);
 $statement->execute();
