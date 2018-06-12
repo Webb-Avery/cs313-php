@@ -21,8 +21,17 @@ catch (PDOException $ex)
 }
 
 
+if($_GET["zone"] == "" or $_GET["plant"] == "")
+{
+
+
+  header("Location: https://sheltered-beyond-43060.herokuapp.com/garden.php" );
+  die();
+}
 $zoneId = $_GET["zone"];
 $plantId = $_GET["plant"];
+
+echo "$zoneId , $plantId";
 $query = 'INSERT INTO zonesPlants(zonesid, plantsid) VALUES(:zonesid, :plantsid)';
 $statement = $db->prepare($query);
             
