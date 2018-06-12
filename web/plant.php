@@ -152,9 +152,9 @@ catch (PDOException $ex)
         {
             $query .= " WHERE lifecycle = :life";
         }
-        elseif(water == "none")
+        elseif($water == "none")
         {
-            
+
         }
         else {
             $query .= " AND lifecycle = :life";
