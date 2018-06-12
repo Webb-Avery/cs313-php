@@ -30,9 +30,9 @@ a {
 }
 
 input {
-    background-color: rgb(255, 192, 0);
+    background-color: rgb(255, 230, 153);
     border: 2px solid;
-    color: black;
+    color: rgb(255,192, 0);
     padding: 10px 1px;
     text-align: center;
     text-decoration: none;
