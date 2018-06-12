@@ -322,8 +322,8 @@ catch (PDOException $ex)
             $sun = $zone["sunexposure"];
             $water = $zone["waterinches"];
             $id = $zone["id"];
-            echo "<h2> Zone: $zoneName</h2>";
-            echo "<a class='submit' href='https://sheltered-beyond-43060.herokuapp.com/zoneChange.php?zone=$id'>Change Attributes of this Zone</a><br>";
+            echo "<h2> Zone: $zoneName  ";
+            echo "<a class='submit' href='https://sheltered-beyond-43060.herokuapp.com/zoneChange.php?zone=$id'>Change Attributes of this Zone</a><br></h2>";
             echo "<a class='zone' href='https://sheltered-beyond-43060.herokuapp.com/plant.php?sun=$sun&water=$water&id=$id'>Add a plant to this Zone</a><br>";
           
 
